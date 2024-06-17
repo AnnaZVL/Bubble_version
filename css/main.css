@@ -1,0 +1,260 @@
+/*Hero*/
+.hero__container {
+    position: relative;
+    /* height: 100%; */
+}
+/* .hero__content {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    width: 50%;
+} 
+
+.hero__title {    
+    font-weight: bold;
+    font-size: 80px;
+    line-height: 120%;
+}
+
+.hero__descr {
+    font-size: 24px;    
+}
+
+.hero__descr--strong{
+    margin-bottom: 40px;
+    font-weight: bold;
+}*/
+
+/* .hero__player {   
+    position: absolute;
+    top: 50px;
+    right: -50px;
+    z-index: -1;
+    width: 830px;
+    height: 810px;
+    background-image: url(../images/Player.webp);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+}
+
+.hero__playlist {
+    position: absolute;
+    top: -120px;
+    right: 9%;    
+    width: 46%;
+    z-index: 100;
+}
+
+.playlist {
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    border: 2px solid var(--color-white);
+    border-radius: 20px;   
+    /* min-height: 60rem;  
+}
+
+.item {
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    border: 1px solid var(--color-white);
+    border-radius: 20px;
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+}
+
+.item__img {
+    flex: 1 0 45px;
+    height: 45px;
+    background-color: #727bf6;
+}
+
+.item__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+    width: 100%;
+}
+
+.item__title {
+    font-size: 24px;
+}
+
+.item__dots {
+    width: 60px;
+    height: 65px;    
+}
+
+.item__tooltip-wrapper {
+    width: 250px;
+    height: fit-content;
+    position: absolute;
+    top: 50%;
+    right: -35%;
+    z-index: 1000;
+    transform: translateY(-50%);  
+    
+}
+
+.item__tooltip {
+    padding: 15px;
+    position: relative;
+    border: 1px solid var(--color-second);   
+    background-color: var(--color-bg);
+}
+
+.item__tooltip::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translate(-9px, -50%);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--color-second);
+    z-index: 1;
+}
+
+.item__circle {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: -1;
+    transform: translate(-26px, -50%);
+    width: 45px;
+    height: 45px;    
+}
+
+.item__circle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 1px solid var(--color-second);
+    opacity: 0;
+    animation: circle 4s linear infinite;
+}
+
+@keyframes circle {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: scale(1.2);
+        opacity: 0;
+      } 
+} */
+/* --------------------- */
+/* main {
+    height: 100%;
+}
+
+.hero2 {
+    position: relative;
+    height: 100%;
+}
+
+.hero__container2::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    width: 50%;
+    height: 70%;
+    background-image: url(../images/Player.webp);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: translate(45%, 20%);
+}
+
+.hero__container2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.hero__ifon {
+    margin: 0 auto;    
+    position: relative;
+    /* width: 100%;
+    height: 100%; 
+}
+
+.ifon__img {
+    width: 120%;
+}
+
+.ifon__video {
+    position: absolute;
+    top: -2%;
+    right: -9%;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+} */
+/* ----------------------- */
+/* main, .hero2, .hero__container2 {
+    height: 100%;
+}
+
+.hero__container2 {
+    position: relative;
+}
+
+.hero__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    z-index: 10;
+}
+
+.hero__ifon {
+    position: relative;
+    background-image: url(../images/Player.webp);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 90%;
+    height: 100%;
+    transform: translate(15%, 0);
+}
+
+.ifon__inner {
+    position: absolute;
+    top: -22px;
+    right: 3%;
+    width: 400px;
+    height: 450px;
+}
+
+.ifon__video {
+    width: 100%;
+    height: 100%;
+} */
+/*---------------*/
+
+/* main, .hero2, .hero__container2 {
+    height: 100%;
+} */
