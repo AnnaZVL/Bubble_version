@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
  
   // Видеоплеер
-    const videoPlayer = document.getElementById('videoPlayer');
+  const videoPlayer = document.getElementById('videoPlayer');
 
   // Массив с URL видеофайлов
   const videos = [
