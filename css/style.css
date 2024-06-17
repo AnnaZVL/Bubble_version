@@ -98,9 +98,8 @@ body {
     background-color: transparent;    
 }
 
-.wrapper {
-    /* padding-top: 150px; */
-    height: 100vh;
+.wrapper {    
+    height: 100%;
     position: relative;    
     overflow: hidden;
 }
