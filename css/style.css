@@ -78,30 +78,27 @@ body {
     margin: 0 auto;
     font-family: 'Montserrat', sans-serif;
     font-weight: normal;
-    font-size: 16px;
+    font-size: 1rem;
     color: var(--color-white);
-    background-color: var(--color-bg);    
-    height: 100vh;
+    background-color: var(--color-bg); 
+    min-height: 100vh;
+    display: flex;   
+    flex-direction: column;  
 }
 
 .main {
     padding-top: 40px;    
     height: 100%;
-}
-
-.btn {    
-    padding: 0;
-    margin: 0;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    background-color: transparent;    
+    flex: 1;
 }
 
 .wrapper {    
-    height: 100%;
-    position: relative;    
-    overflow: hidden;
+    
+    position: relative;   
+    display: flex; 
+    flex-direction: column;
+    flex: 1;
+    overflow: hidden;    
 }
 
 .wrapper::after {
@@ -134,12 +131,12 @@ body {
 .wrapper::before {
     content: '';
     position: absolute;
-    top: -200px;
+    top: 0px;
     z-index: -1;
     width: 100%;
     height: 100%;
     background: -o-radial-gradient(circle, var(--color-blue) 0%, var(--color-bg) 50%);
-    background: radial-gradient(circle, var(--color-blue) 0%, var(--color-bg) 50%); 
+    background: radial-gradient(circle at top, var(--color-blue) 0%, var(--color-bg) 80%); 
     opacity: 0.3;
 }
 
@@ -147,6 +144,15 @@ body {
     margin: 0 auto;
     padding: 0 15px;
     max-width: 1280px;
+}
+
+.btn {    
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;    
 }
 
 /*HEADER*/
@@ -447,20 +453,6 @@ body {
     margin-bottom: 50px;
 }
 
-.hero__content {  
-    display: -webkit-box;  
-    display: -ms-flexbox;  
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    gap: 20px;    
-} 
-
 .hero__container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -475,9 +467,20 @@ body {
     position: relative;
 }
 
-.hero__content {
-    width: 50%;
-}
+.hero__content {  
+    display: -webkit-box;  
+    display: -ms-flexbox;  
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 20px;    
+    flex: 0 0 48%; /*600/1250*/
+} 
 
 .hero__ifon {
     margin-left: auto;
@@ -501,12 +504,12 @@ body {
 
 .hero__title {    
     font-weight: bold;
-    font-size: 80px;
+    font-size: 5rem;
     line-height: 120%;
 }
 
 .hero__descr {
-    font-size: 24px;    
+    font-size: 1.5rem;    
 }
 
 .hero__descr--strong{
