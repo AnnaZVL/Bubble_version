@@ -157,7 +157,7 @@ body {
 
 /*HEADER*/
 .header {
-    padding: 20px 0;    
+    padding: 20px 0 0;    
     width: 100%;
 }
 
@@ -449,9 +449,9 @@ body {
 }
 
 /*HERO*/
-.hero {
+/* .hero {
     margin-bottom: 50px;
-}
+} */
 
 .hero__container {
     display: -webkit-box;
