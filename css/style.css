@@ -83,22 +83,21 @@ body {
     background-color: var(--color-bg); 
     height: 100vh;
     display: flex;   
-    flex-direction: column;  
+    flex-direction: column; 
+    min-width: 320px; 
 }
 
 .main {
-    padding-top: 40px;    
+    margin-top: 40px;    
     height: 100%;
     flex: 1;
 }
 
-.wrapper {    
-    
+.wrapper {       
     position: relative;   
     display: flex; 
     flex-direction: column;
-    flex: 1;
-    overflow: hidden;    
+    flex: 1;          
 }
 
 .wrapper::after {
@@ -113,19 +112,6 @@ body {
     -o-linear-gradient(white 1px, transparent 1px),
     -o-linear-gradient(left, white 1px, transparent 1px),
     -o-linear-gradient(top, rgba(255,255,255, 0.1) 0%, rgb(255,255,255,1) 80%);
-    background-image: 
-    linear-gradient(white 1px, transparent 1px),
-    linear-gradient(90deg, white 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255,255,255, 0.1) 0%, rgb(255,255,255,1) 80%);
-  background-size: 
-    150px 150px,
-    150px 150px,
-    100% 100%;
-  background-position: 
-    -1px -1px,
-    -1px -1px,
-    0 0;
-    opacity: 0.1;
 }
 
 .wrapper::before {
@@ -449,8 +435,9 @@ body {
 }
 
 /*HERO*/
-.hero__container {
-    display: -webkit-box;
+.hero__container {    
+    margin-bottom: 40px;
+    /* display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
@@ -459,8 +446,20 @@ body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    gap: 40px;
-    position: relative;
+    gap: 40px; */ 
+    position: relative;   
+    width: 100%; 
+}
+
+.hero__container::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;    
+    background-image: url(../images/Phone_in_Hand.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
 }
 
 .hero__content {  
@@ -475,37 +474,21 @@ body {
         -ms-flex-align: start;
             align-items: flex-start;
     gap: 20px;    
-    flex: 0 0 48%; /*600/1250*/
+    flex: 1 0 48%; 
+    width: 48%;
 } 
 
-.hero__ifon {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;   
-}
-
-/* .hero__ifon::before {
-    content: '';
+.hero__video {
     position: absolute;
-    top: 0;
-    right: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    background: url(../images/iphone.png) center no-repeat;
-} */
-
-.ifon__video {
-    position: absolute;
-    inset: 0;
-    transform: translate(11%, 18%);
+    bottom: 22%;
+    right: 15%;
+    max-width: 230px;
+    transform: translate(17%, 1%) rotate(1deg);        
 }
 
 .hero__title {    
     font-weight: bold;
-    font-size: 5rem;
+    font-size: 4.4rem;
     line-height: 120%;
 }
 
@@ -555,6 +538,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+    z-index: -2;
     width: 100%;
     height: 100%;
     overflow: hidden;
