@@ -436,17 +436,7 @@ body {
 
 /*HERO*/
 .hero__container {    
-    margin-bottom: 40px;
-    /* display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    gap: 40px; */ 
+    margin-bottom: 40px;    
     position: relative;   
     width: 100%; 
 }
@@ -478,12 +468,16 @@ body {
     width: 48%;
 } 
 
-.hero__video {
+.hero__player-inner {
     position: absolute;
     bottom: 22%;
-    right: 15%;
-    max-width: 230px;
-    transform: translate(17%, 1%) rotate(1deg);        
+    right: 15%;    
+    transform: translate(16%, 1%) rotate(1deg);        
+}
+
+.hero__video {
+    max-width: 220px;
+    border-radius: 15px;
 }
 
 .hero__title {    
@@ -630,10 +624,7 @@ body {
 }
 
 .contacts {
-    padding: 15px;
-    /* position: absolute;
-    bottom: 5%;
-    left: 250px;        */
+    padding: 15px;   
     width: -webkit-max-content;       
     width: -moz-max-content;       
     width: max-content;
