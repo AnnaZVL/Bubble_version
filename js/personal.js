@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
         $aside = document.getElementById('aside');
 
         $buttonClose.addEventListener('click', () => {
-            $aside.classList.toggle('show');
+            $aside.classList.toggle('hidden');
             $buttonClose.classList.toggle('show')
         })
 

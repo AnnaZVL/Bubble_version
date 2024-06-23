@@ -30,19 +30,19 @@
                             fill-opacity="1" fill-rule="nonzero" />
                     </svg>
                 </a>
-                <button class="btn header__btn login__btn">
-                    <span class="btn__line btn__line--top"></span>
-                    <span class="btn__line btn__line--right"></span>
-                    <span class="btn__line btn__line--bottom"></span>
-                    <span class="btn__line btn__line--left"></span>
-                    Войти</button>
+                <a class="header__link link" href="#">
+                    <span class="link__line link__line--top"></span>
+                    <span class="link__line link__line--right"></span>
+                    <span class="link__line link__line--bottom"></span>
+                    <span class="link__line link__line--left"></span>
+                    Войти</a>
             </div>
         </header>
         <main class="main-personal">
             <div class="main-personal__container container">
-                <aside class="aside-personal show" id="aside">
-                    <button class="btn aside-personal__close" id="close" title="Свернуть меню">
-                    </button>
+                <button class="btn aside-personal__close" id="close" title="Свернуть меню">
+                </button>
+                <aside class="aside-personal" id="aside">
                     <div class="aside-personal__inner">
                         <div class="aside-personal__box">
                             <ul class="aside-personal__menu aside-menu visible">
@@ -165,7 +165,33 @@
                         </div>
                     </div>
                 </aside>
-                <div class="personal-content"></div>
+                <article class="personal-content">
+                    <section class="personal-section news">
+                        <div class="new__top">
+                            <img class="news__img" src="../images/Kancler.webp" alt="Обложка новости">
+                            <h3 class="news__title personal-section__title">Заголовок новости специально сделан
+                                длинным, что бы показать окончание строки</h3>
+                        </div>
+
+                        <div class="news__body">
+                            <p class="news__descr personal-section__descr">Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Facere
+                                est voluptatibus labore ipsa, reiciendis sit dolor quia excepturi accusamus. Iusto,
+                                quasi cupiditate! Ex, fugit sapiente atque quis quod amet! Eos odit rerum ratione
+                                ullam optio veniam mollitia asperiores provident sunt blanditiis quibusdam, magni
+                                beatae totam atque sint nesciunt explicabo repellendus.</p>
+                            <div class="news__bottom">
+                                <time datetime="2024-05-24"></time>
+                                <a class="news__link link" href="#">
+                                    <span class="link__line link__line--top"></span>
+                                    <span class="link__line link__line--right"></span>
+                                    <span class="link__line link__line--bottom"></span>
+                                    <span class="link__line link__line--left"></span>
+                                    Подробнее</a>
+                            </div>
+                        </div>
+                    </section>
+                </article>
             </div>
         </main>
     </div>
