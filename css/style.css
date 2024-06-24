@@ -45,6 +45,8 @@ img {
     --color-prime: #f41f04;
     --color-second: #f29069;
     --color-blue: #535ff6;
+    --color-blue-r: 83, 95, 246;
+    --color-gray: #aaa;    
 }
 
 @font-face {

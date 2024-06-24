@@ -183,23 +183,28 @@
 .personal-section {
     padding: 20px;    
     flex-shrink: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
     border-radius: 20px;
     border: 1px solid rgba(83, 95, 246, 0.4);
 }
 
-.new__top {
-    display: grid;
-    grid-template-columns: 100px 1fr;
-    width: 100%;
-    gap: 40px;
+.personal-section__title {
+    font-size: 42px;   
+    text-transform: uppercase;
+    color: var(--color-second);
 }
 
-.personal-section__title {
+.personal-section__subtitle {
     font-size: 42px;   
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
 
+.personal-section__subtitle::first-letter {
+    text-transform: uppercase;
 }
 
 .personal-section__descr {
@@ -211,6 +216,14 @@
 .news {
     display: grid;
     gap: 30px;
+    background-color: rgba(var(--color-blue-r), 0.2);
+}
+
+.new__top {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    width: 100%;
+    gap: 40px;
 }
 
 .news__body {
@@ -221,9 +234,97 @@
     gap: 25px;
 }
 
+.news__img {
+    border-radius: 20px;
+}
+
 .news__bottom {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 15px;
+    width: 100%;
+}
+
+/*Playlists*/
+
+/*Track*/
+.track {
+    display: grid;
+    grid-template-columns: 100px auto 30%;
+    gap: 40px;
+}
+
+.track__img {
+    border-radius: 20px;
+}
+
+.track__content {
+    display: grid;
+    gap: 20px;
+}
+
+.track__name {
+    font-size: 24px;
+}
+
+.track__name::first-letter {
+    text-transform: uppercase;
+}
+
+.track__actions {
+    display: grid;
+    gap: 10px;
+}
+
+.track__btn {
+    padding: 7px 5px;
+    width: 100%;
+    min-width: 70px;   
+    border: 1px solid var(--color-blue);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    transition: border 0.3s ease-in-out;
+}
+
+.track__btn:focus {
+    border-color: var(--color-second);
+}
+
+.track__btn:hover {
+    border-color: var(--color-second);
+}
+
+.track__btn:disabled {
+    filter: brightness(50%);
+    cursor: not-allowed;
+    border-color: transparent;
+}
+
+.track__icon {
+    width: 50px;
+    height: 50px;
+}
+
+.track__icon--like path {
+    fill: var(--color-gray);
+}
+
+.track__like.like > .track__icon--like path {
+    fill: var(--color-second);
+}
+
+.track__icon--donat path {
+    fill: var(--color-gray);
+}
+
+.track__btn:active .track__icon--play rect {
+    fill: var(--color-second);
+}
+
+.track__btn--text {
+    color: var(--color-white);
 }
