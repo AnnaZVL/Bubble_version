@@ -30,12 +30,12 @@
                             fill-opacity="1" fill-rule="nonzero" />
                     </svg>
                 </a>
-                <a class="header__link link" href="#">
+                <button class="btn header__link link" id="sign">
                     <span class="link__line link__line--top"></span>
                     <span class="link__line link__line--right"></span>
                     <span class="link__line link__line--bottom"></span>
                     <span class="link__line link__line--left"></span>
-                    Войти</a>
+                    Войти</button>
             </div>
         </header>
         <main class="main-personal">
@@ -284,6 +284,56 @@
                 </article>
             </div>
         </main>
+        <div class="modal" id="modal">
+            <div class="modal__body">
+                <button class="btn modal__close" id="modalClose">
+                    <span class="modal__close--line"></span>
+                    <span class="modal__close--line"></span>
+                </button>
+                <div class="modal__top">
+                    <button class="btn modal__btn active">Вход</button>
+                    <button class="btn modal__btn">Регистрация</button>
+                </div>
+                <div class="modal__inner">
+                    <form class="modal__form form" id="signUp" action="POST">
+                        <label class="form__label" for="email">
+                            Ваш логин (адрес электронной почты)
+                            <input class="form__input" type="email" name="email" id="email" required
+                                placeholder="Введите почту">
+                            <span class="form__error">Поле обязательно для заполнения</span>
+                        </label>
+                        <label class="form__label" for="email">
+                            Пароль
+                            <input class="form__input" type="password" name="password" id="password" required
+                                placeholder="Пароль" autocomplete="off">
+                            <span class="form__error">Поле обязательно для заполнения</span>
+                        </label>
+                        <button class="btn form__btn" type="submit">Войти</button>
+                    </form>
+                    <form class="modal__form form hidden" id="login" action="POST">
+                        <label class="form__label" for="email">
+                            Ваш логин (адрес электронной почты)
+                            <input class="form__input" type="email" name="email" id="newEmail" required
+                                placeholder="Введите почту">
+                            <span class="form__error">Поле обязательно для заполнения</span>
+                        </label>
+                        <label class="form__label" for="email">
+                            Пароль
+                            <input class="form__input" type="password" name="password" id="newPassword" required
+                                placeholder="Пароль" autocomplete="off">
+                            <span class="form__error">Поле обязательно для заполнения</span>
+                        </label>
+                        <label class="form__label" for="email">
+                            Повторите пароль
+                            <input class="form__input" type="password" name="password" id="rePassword" required
+                                placeholder="Пароль" autocomplete="off">
+                            <span class="form__error">Поле обязательно для заполнения</span>
+                        </label>
+                        <button class="btn form__btn" type="submit">Зарегистрироваться</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="../js/personal.js"></script>
 </body>

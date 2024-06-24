@@ -46,4 +46,42 @@ document.addEventListener("DOMContentLoaded", () => {
             like.classList.toggle('like')
         })
     })
+
+    // Модальное окно
+    // Открытие модального окна
+    const $btnOpenModal = document.getElementById('sign'),
+        $modal = document.getElementById('modal'),
+        $btnCloseModal = document.getElementById('modalClose');
+
+    $btnOpenModal.addEventListener('click', () => {
+        $modal.classList.add('visible');
+    });
+
+    // Закрытие модальногоокна по кнопке
+    $btnCloseModal.addEventListener('click', () => {
+        $modal.classList.remove('visible');
+    });
+
+    // Закрытие модальногоокна по эскейп
+    window.addEventListener('keydown', () => {
+        $modal.classList.remove('visible');      
+    })
+
+    // Переключение форм входа
+    // Смена кнопки
+    const $modalBtnAll = document.querySelectorAll('.modal__btn'),
+        $formSign = document.getElementById('signUp'),
+        $formLogin = document.getElementById('login');
+
+    $modalBtnAll.forEach(btn => {
+        btn.addEventListener('click', (event) => {
+            $modalBtnAll.forEach(i => i.classList.remove('active'));           
+            event.target.classList.add('active');
+            
+            $formLogin.classList.toggle('hidden');
+            $formSign.classList.toggle('hidden');
+        })
+    })
+
+    
 })

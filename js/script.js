@@ -2,8 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Бургер меню
     const $burger = document.getElementById('burger'),
     $nav = document.getElementById('nav'),
-    $menuItems = document.querySelectorAll('.menu__item'),
-    $socialLinks = document.querySelectorAll('.header__link');
+    $menuItems = document.querySelectorAll('.menu__item');
 
     $burger.addEventListener('click', () => {
         $burger.classList.toggle('open');
