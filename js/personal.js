@@ -23,17 +23,20 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
     //Смена активного пункта в боковой панели
-    const asideMenu = document.querySelector('.aside-menu');
+    const asideMenu = document.querySelector('.aside-menu'),
+        $heroBlock = document.getElementById('hero'),
+        $eventBlock = document.getElementById('event');
 
     asideMenu.addEventListener('click', (event) => {
         const target = event.target;
         const asideMenuItem = target.closest('.aside-menu__item');
 
-        if (asideMenuItem) {
-            
+        if (asideMenuItem) {            
             document.querySelectorAll('.aside-menu__item').forEach(item => item.classList.remove('active'));
 
             asideMenuItem.classList.add('active');
+            $eventBlock.classList.toggle('active-content');
+            $heroBlock.classList.toggle('active-content');
         }
     });
 
@@ -69,19 +72,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Переключение форм входа
     // Смена кнопки
-    const $modalBtnAll = document.querySelectorAll('.modal__btn'),
+    const $loginBtn = document.getElementById('loginBtn'),
+     $registerBtn = document.getElementById('registerBtn'),
+    $checkbox = document.getElementById('reg-log'),
         $formSign = document.getElementById('signUp'),
         $formLogin = document.getElementById('login');
 
-    $modalBtnAll.forEach(btn => {
-        btn.addEventListener('click', (event) => {
-            $modalBtnAll.forEach(i => i.classList.remove('active'));           
-            event.target.classList.add('active');
+    // $modalBtnAll.forEach(btn => {
+    //     btn.addEventListener('click', (event) => {
+    //         $modalBtnAll.forEach(i => i.classList.remove('active'));           
+    //         event.target.classList.add('active');
             
-            $formLogin.classList.toggle('hidden');
-            $formSign.classList.toggle('hidden');
-        })
-    })
+    //         $checkbox.getAttribute('checked', true)
+    //         // $formLogin.classList.toggle('hidden');
+    //         // $formSign.classList.toggle('hidden');
+    //     })
+    // })
+    $loginBtn.addEventListener('click', function () {
+        $checkbox.checked = false;
+        $loginBtn.classList.add('active');
+        $registerBtn.classList.remove('active');
+    });
 
+    $registerBtn.addEventListener('click', function () {
+        $checkbox.checked = true;
+        $registerBtn.classList.add('active');
+        $loginBtn.classList.remove('active');
+    });
     
 })

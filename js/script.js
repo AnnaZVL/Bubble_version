@@ -31,8 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Массив с URL видеофайлов
   const videos = [
-    './images/train.mp4', 
-    './images/IG-stories.mp4' 
+    './images/home_page/train.mp4', 
+    './images/home_page/IG-stories.mp4' 
   ];
 
   let currentVideoIndex = 0;

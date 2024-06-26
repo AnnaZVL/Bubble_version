@@ -170,13 +170,14 @@ body {
 }
 
 .logo__icon {
+    fill: var(--color-blue);
     -webkit-transition: fill 0.3s ease-in-out;
     -o-transition: fill 0.3s ease-in-out;
     transition: fill 0.3s ease-in-out;
 }
 
-.header__logo:hover > .logo__icon path {
-    fill: #727bf6;
+.header__logo:hover > .logo__icon  {
+    fill: #727bf6; 
     
 }
 
@@ -285,6 +286,7 @@ body {
     color: var(--color-white);
     position: relative;
     overflow: hidden;
+    font-size: 18pz;
     -webkit-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
@@ -448,7 +450,7 @@ body {
     position: absolute;
     inset: 0;
     z-index: -1;    
-    background-image: url(../images/Phone_in_Hand.png);
+    background-image: url(../images/home_page/Phone_in_Hand.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: right;
@@ -663,7 +665,9 @@ body {
 }
 
 .contacts__link > .contacts__icon {
-    fill: var(--color-white)
+    fill: var(--color-white);
+    width: 60px;
+    height: 60px;
 }
 
 .contacts__link:hover > .contacts__icon {
