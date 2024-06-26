@@ -62,32 +62,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Закрытие модальногоокна по кнопке
     $btnCloseModal.addEventListener('click', () => {
+        console.log('close');
         $modal.classList.remove('visible');
     });
 
     // Закрытие модальногоокна по эскейп
-    window.addEventListener('keydown', () => {
-        $modal.classList.remove('visible');      
-    })
+    window.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') {            
+            $modal.classList.remove('visible');
+        }
+    });
 
     // Переключение форм входа
     // Смена кнопки
     const $loginBtn = document.getElementById('loginBtn'),
-     $registerBtn = document.getElementById('registerBtn'),
-    $checkbox = document.getElementById('reg-log'),
-        $formSign = document.getElementById('signUp'),
-        $formLogin = document.getElementById('login');
+        $formAll = document.querySelector('.form'),
+        $registerBtn = document.getElementById('registerBtn'),
+        $checkbox = document.getElementById('reg-log');
 
-    // $modalBtnAll.forEach(btn => {
-    //     btn.addEventListener('click', (event) => {
-    //         $modalBtnAll.forEach(i => i.classList.remove('active'));           
-    //         event.target.classList.add('active');
-            
-    //         $checkbox.getAttribute('checked', true)
-    //         // $formLogin.classList.toggle('hidden');
-    //         // $formSign.classList.toggle('hidden');
-    //     })
-    // })
+    $formAll.addEventListener('submit', (event) => {
+        event.preventDefault()
+    });
+
     $loginBtn.addEventListener('click', function () {
         $checkbox.checked = false;
         $loginBtn.classList.add('active');
@@ -97,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
     $registerBtn.addEventListener('click', function () {
         $checkbox.checked = true;
         $registerBtn.classList.add('active');
-        $loginBtn.classList.remove('active');
+        $loginBtn.classList.remove('active');        
     });
     
 })
