@@ -96,4 +96,31 @@ document.addEventListener("DOMContentLoaded", () => {
         $loginBtn.classList.remove('active');        
     });
     
+    // Слайдер секции топ исполнителей
+    const swiperTop = new Swiper('.top__list', {        
+        direction: 'horizontal',
+        loop: true,  
+        slidesPerGroup: 1,
+        slidesPerView: 2,
+        spaceBetween: 20,
+        autoHeight: false,    
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },        
+      });
+
+      // Слайдер секции завершенные события
+    const swiperOldEvent = new Swiper('.oldEvent__cards', {        
+        direction: 'horizontal',
+        loop: false,  
+        slidesPerGroup: 1,
+        slidesPerView: 2,
+        spaceBetween: 20,
+        autoHeight: false,    
+        navigation: {
+            nextEl: '.swiper-button__next',
+            prevEl: '.swiper-button__prev',
+          },
+      });
 })
