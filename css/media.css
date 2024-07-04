@@ -35,18 +35,27 @@
         left: -50%;
     }
 
-    .hero__container::after {
-        top: 150px;
-        height: 100%;
+    .hero__container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
     }
 
-    .hero__video {
-        bottom: 10%;
-        right: 21%;
-        transform: translate(20%, 17%) rotate(1deg); 
+    .hero__content {
+        position: static;
+        align-items: center;     
+        width: 100%;   
     }
     
-   
+    .hero__title, .hero__descr, .hero__descr--strong {
+        text-align: center;
+    }
+    
+    .hero__player {   
+        margin: 0;    
+        width: 100%;
+    }   
 }
 
 @media (max-width: 992px) {
@@ -57,37 +66,6 @@
     .header {
         padding: 0;
     }
-    
-    .hero__content {
-        width: 100%;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .hero__container {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .hero__container::after {       
-        position: relative;
-        top: -120px;
-        height: 700px;
-    }
-
-    .hero__title, .hero__descr {
-        text-align: center;
-    }
-
-    .hero__link { 
-        margin-bottom: 20px;
-    }
-
-    .hero__video {
-        bottom: 28%;
-        max-width: 210px;
-        transform: translate(16%, 17%) rotate(1deg);
-    }
 }
 
 @media (max-width: 768px) {
@@ -95,18 +73,16 @@
         max-width: 762px;
     }
     
-    .hero__container::after { 
-        top: 0;
-        height: 500px;
-        background-image: url(../images/iphone.png);
-        background-position: center;
+    .hero__player {
+        background-size: cover;
     }
 
-    .hero__video {
-        bottom: 7%;
-        right: 37%;        
-        max-width: 200px;
-        transform: translate(0, 0) rotate(0deg);
+    .hero__title {
+        font-size: 3.3rem;
+    }
+    
+    .hero__descr {
+        font-size: 1.2rem;    
     }
 }
 
@@ -136,14 +112,7 @@
     .hero__descr {
         font-size: 1rem;
     }
-
-    .hero__video {
-        right: 31%;
-    }
 }
 
 @media (max-width: 380px) {
-    .hero__video {
-        right: 20%;
-    }
 }
