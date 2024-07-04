@@ -60,13 +60,12 @@ document.addEventListener("DOMContentLoaded", () => {
         $modal.classList.add('visible');
     });
 
-    // Закрытие модальногоокна по кнопке
-    $btnCloseModal.addEventListener('click', () => {
-        console.log('close');
+    // Закрытие модального окна по кнопке
+    $btnCloseModal.addEventListener('click', () => {        
         $modal.classList.remove('visible');
     });
 
-    // Закрытие модальногоокна по эскейп
+    // Закрытие модального окна по эскейп
     window.addEventListener('keydown', function (event) {
         if (event.key === 'Escape') {            
             $modal.classList.remove('visible');
@@ -123,4 +122,81 @@ document.addEventListener("DOMContentLoaded", () => {
             prevEl: '.swiper-button__prev',
           },
       });
+
+    // Кнопка загрузки
+    const $btnDownload = document.getElementById('download'),
+    $list = document.querySelector('.header__box');
+
+    $btnDownload.addEventListener('click', () => {
+        $list.classList.add('show');
+    })
+
+    // Закрытие списка по эскейп
+    window.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && $list.classList.contains('show')) {            
+            $list.classList.remove('show');
+        }
+    });
+
+    // Кнопка Релиз на дистрибуцию
+    const $btnDownloadDistrib = document.getElementById('downloadDistrib'),
+    $distribSection = document.getElementById('distribSection');
+
+    $btnDownloadDistrib.addEventListener('click', () => {
+        $eventBlock.classList.remove('active-content');
+        $heroBlock.classList.remove('active-content');
+        $distribSection.classList.add('active-content');
+        $list.classList.remove('show');
+    })
+
+    const $btnDownloadMinus = document.getElementById('downloadMinus')
+
+    const $btnAddLink= document.getElementById('addLink')
+
+    // Смена секций 
+    const $btnAdd = document.querySelectorAll('.download__btn'),        
+        $questions = document.getElementById('questions'),
+        $sections = document.querySelectorAll('.download__section')
+        $addSingl = document.getElementById('addSingl'),
+        $addAlbum = document.getElementById('addAlbum');
+
+    $btnAdd.forEach(btn => {    
+        btn.addEventListener('click', (event) => {
+            const currentBtn = event.target.closest('.download__btn');
+
+            if (currentBtn) {
+                $btnAdd.forEach(btn => {
+                    btn.classList.toggle('active');
+                })
+
+                $sections.forEach(item => {
+                    item.classList.add('section-hidden')
+                    if (item.dataset.name === currentBtn.dataset.name) {
+                        item.classList.remove('section-hidden')
+                    }
+                })
+                // $addSingl.classList.remove('section-hidden');
+                
+                $questions.classList.add('section-hidden');
+                currentBtn.classList.add('active');
+            }
+            // if (currentBtn && currentBtn.dataset.name === btn.dataset.name) {
+            //     console.log(currentBtn.dataset.name, btn.dataset.name);
+            //     btn.classList.add('active');
+            // } else {
+            //     console.log('no', currentBtn.dataset.name, btn.dataset.name);
+            //     btn.classList.remove('active');
+            // }
+            
+            // if (currentBtn && currentBtn.dataset.name === btn.dataset.name) {               
+            //     btn.classList.remove('active');
+            //     currentBtn.classList.add('active');
+            //     
+            // } 
+            // else {
+            //     btn.classList.remove('active');
+            // }      
+        })
+    })
+
 })
