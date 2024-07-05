@@ -58,17 +58,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
     $btnOpenModal.addEventListener('click', () => {
         $modal.classList.add('visible');
+        document.body.classList.add('scroll-stop');
     });
 
     // Закрытие модального окна по кнопке
     $btnCloseModal.addEventListener('click', () => {        
         $modal.classList.remove('visible');
+        document.body.classList.remove('scroll-stop');
     });
 
     // Закрытие модального окна по эскейп
     window.addEventListener('keydown', function (event) {
         if (event.key === 'Escape') {            
             $modal.classList.remove('visible');
+            document.body.classList.remove('scroll-stop');
         }
     });
 
@@ -165,7 +168,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (currentBtn) {
                 $btnAdd.forEach(btn => {
-                    btn.classList.toggle('active');
+                    btn.classList.remove('active');
                 });
 
                 $sections.forEach(item => {
@@ -190,6 +193,27 @@ document.addEventListener("DOMContentLoaded", () => {
     const element = document.getElementById('genre');
     const choices = new Choices(element, {
         searchEnabled: false,
+        allowHTML: true
     });
 
+    // Шаги добавления песни
+    const $btnStepTwo = document.querySelector('.singl__form-btn'),
+        $singlForm = document.querySelector('.singl__form'),
+        $singlFormAudio = document.querySelector('.singl__form-audio'),
+        $sectionStepTwo = document.querySelector('.download__section-step2'),
+        $sectionStepThree = document.querySelector('.download__section-step3');
+
+        $singlForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            $sectionStepTwo.classList.add('section-hidden');
+            $sectionStepThree.classList.remove('section-hidden');
+
+            $steps[2].classList.add('active')
+        })
+
+        $singlFormAudio.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            $steps[3].classList.add('active');
+        })
 })

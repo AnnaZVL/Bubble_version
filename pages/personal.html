@@ -860,138 +860,177 @@
                             </button>
                         </div>
                         <div class="download__section questions" id="questions">
-                            <div class="download__content--item">
-                                <h5 class="download__content-title">Куда загружается релиз?</h5>
-                                <p class="download__content-descr">Lorem ipsum, dolor sit amet consectetur adipisicing
-                                    elit. Corrupti perspiciatis nulla pariatur voluptatum cum dolores! Cum perferendis
-                                    ad suscipit veritatis.</p>
-                            </div>
-                            <div class="download__content--item">
-                                <h5 class="download__content-title">В каком виде статистика?</h5>
-                                <p class="download__content-descr">Lorem ipsum, dolor sit amet consectetur adipisicing
-                                    elit. Corrupti perspiciatis nulla pariatur voluptatum cum dolores! Cum perferendis
-                                    ad suscipit veritatis.</p>
-                            </div>
-                            <div class="download__content--item">
-                                <h5 class="download__content-title">Какие финансовые условия?</h5>
-                                <p class="download__content-descr">Lorem ipsum, dolor sit amet consectetur adipisicing
-                                    elit. Corrupti perspiciatis nulla pariatur voluptatum cum dolores! Cum perferendis
-                                    ad suscipit veritatis.</p>
-                            </div>
-                            <div class="download__content--item">
-                                <h5 class="download__content-title">Юридические условия</h5>
-                                <p class="download__content-descr">Lorem ipsum, dolor sit amet consectetur adipisicing
-                                    elit. Corrupti perspiciatis nulla pariatur voluptatum cum dolores! Cum perferendis
-                                    ad suscipit veritatis.</p>
+                            <div class="download__section-step1" data-step="one">
+                                <div class="download__content--item">
+                                    <h5 class="download__content-title">Куда загружается релиз?</h5>
+                                    <p class="download__content-descr">Lorem ipsum, dolor sit amet consectetur
+                                        adipisicing
+                                        elit. Corrupti perspiciatis nulla pariatur voluptatum cum dolores! Cum
+                                        perferendis
+                                        ad suscipit veritatis.</p>
+                                </div>
+                                <div class="download__content--item">
+                                    <h5 class="download__content-title">В каком виде статистика?</h5>
+                                    <p class="download__content-descr">Lorem ipsum, dolor sit amet consectetur
+                                        adipisicing
+                                        elit. Corrupti perspiciatis nulla pariatur voluptatum cum dolores! Cum
+                                        perferendis
+                                        ad suscipit veritatis.</p>
+                                </div>
+                                <div class="download__content--item">
+                                    <h5 class="download__content-title">Какие финансовые условия?</h5>
+                                    <p class="download__content-descr">Lorem ipsum, dolor sit amet consectetur
+                                        adipisicing
+                                        elit. Corrupti perspiciatis nulla pariatur voluptatum cum dolores! Cum
+                                        perferendis
+                                        ad suscipit veritatis.</p>
+                                </div>
+                                <div class="download__content--item">
+                                    <h5 class="download__content-title">Юридические условия</h5>
+                                    <p class="download__content-descr">Lorem ipsum, dolor sit amet consectetur
+                                        adipisicing
+                                        elit. Corrupti perspiciatis nulla pariatur voluptatum cum dolores! Cum
+                                        perferendis
+                                        ad suscipit veritatis.</p>
+                                </div>
                             </div>
                         </div>
                         <div class="download__section singl section-hidden" id="addSingl" data-name="singl">
-                            <h2 class="download__title">Информация о релизе</h2>
-                            <div class="singl__form">
-                                <h6 class="singl__form-title">Выберите жанр</h6>
-                                <select class="singl__form-select" name="genre" id="genre">
-                                    <option value="pop"></option>
-                                    <option value="rok">Рок-музыка</option>
-                                    <option value="jas"></option>
-                                </select>
-                                <div class="singl__box">
-                                    <h6 class="singl__form-title">Обложка</h6>
-                                    <div class="tultip">
-                                        <button class="tultip__btn">
-                                            <svg class="tultip__icon">
-                                                <use xlink:href="#tultip"></use>
-                                            </svg>
-                                        </button>
-                                        <p class="tultip__content">Lorem ipsum dolor sit, amet consectetur adipisicing
-                                            elit.
-                                            Necessitatibus magni modi, adipisci cumque, minus nulla tenetur pariatur
-                                        </p>
+                            <div class="download__section-step2" data-step="two">
+                                <h2 class="download__title">Информация о релизе</h2>
+                                <form class="singl__form" action="POST">
+                                    <h6 class="singl__form-title">Выберите жанр</h6>
+                                    <select class="singl__form-select" name="genre" id="genre">
+                                        <option value="pop">Поп-музыка</option>
+                                        <option value="rok">Рок-музыка</option>
+                                        <option value="jazz">Джаз</option>
+                                        <option value="hop">Хип-Хоп</option>
+                                        <option value="folk">Фольк</option>
+                                    </select>
+                                    <div class="singl__box">
+                                        <h6 class="singl__form-title">Обложка</h6>
+                                        <div class="tultip">
+                                            <button class="tultip__btn">
+                                                <svg class="tultip__icon">
+                                                    <use xlink:href="#tultip"></use>
+                                                </svg>
+                                            </button>
+                                            <p class="tultip__content">Lorem ipsum dolor sit, amet consectetur
+                                                adipisicing
+                                                elit.
+                                                Necessitatibus magni modi, adipisci cumque, minus nulla tenetur pariatur
+                                            </p>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="singl__form-inner">
-                                    <input class="singl__form-img" name="img" type="file">
-                                    <label class="singl__form-label" for="img">
-                                        <span>+</span>
-                                    </label>
-                                </div>
-                                <div class="singl__form-wrapper">
-                                    <label class="singl__form-label" for="name">
-                                        <p>Исполнитель</p>
-                                        <input class="singl__form-input" type="text" name="name"
-                                            placeholder="Исполнитель">
-                                        <div class="tultip">
-                                            <button class="tultip__btn">
-                                                <svg class="tultip__icon">
-                                                    <use xlink:href="#tultip"></use>
-                                                </svg>
-                                            </button>
-                                            <p class="tultip__content">Lorem ipsum dolor sit, amet consectetur
-                                                adipisicing
-                                                elit.
-                                                Necessitatibus magni modi, adipisci cumque, minus nulla tenetur pariatur
-                                            </p>
-                                        </div>
-                                    </label>
+                                    <div class="singl__form-inner">
+                                        <input class="singl__form-file" type="file" accept="image/*" id="img">
+                                        <label class="singl__form-label" for="img">
+                                            <span>+</span>
+                                        </label>
+                                    </div>
+                                    <div class="singl__form-wrapper">
+                                        <label class="singl__form-label" for="name">
+                                            <p>Исполнитель</p>
+                                            <input class="singl__form-input" type="text" id="name"
+                                                placeholder="Исполнитель">
+                                            <div class="tultip">
+                                                <button class="tultip__btn">
+                                                    <svg class="tultip__icon">
+                                                        <use xlink:href="#tultip"></use>
+                                                    </svg>
+                                                </button>
+                                                <p class="tultip__content">Lorem ipsum dolor sit, amet consectetur
+                                                    adipisicing
+                                                    elit.
+                                                    Necessitatibus magni modi, adipisci cumque, minus nulla tenetur
+                                                    pariatur
+                                                </p>
+                                            </div>
+                                        </label>
 
-                                    <label class="singl__form-label" for="title">
-                                        <p>Название релиза</p>
-                                        <input class="singl__form-input" type="text" name="title"
-                                            placeholder="Название релиза">
-                                        <div class="tultip">
-                                            <button class="tultip__btn">
-                                                <svg class="tultip__icon">
-                                                    <use xlink:href="#tultip"></use>
-                                                </svg>
-                                            </button>
-                                            <p class="tultip__content">Lorem ipsum dolor sit, amet consectetur
-                                                adipisicing
-                                                elit.
-                                                Necessitatibus magni modi, adipisci cumque, minus nulla tenetur pariatur
-                                            </p>
-                                        </div>
-                                    </label>
+                                        <label class="singl__form-label" for="title">
+                                            <p>Название релиза</p>
+                                            <input class="singl__form-input" type="text" id="title"
+                                                placeholder="Название релиза">
+                                            <div class="tultip">
+                                                <button class="tultip__btn">
+                                                    <svg class="tultip__icon">
+                                                        <use xlink:href="#tultip"></use>
+                                                    </svg>
+                                                </button>
+                                                <p class="tultip__content">Lorem ipsum dolor sit, amet consectetur
+                                                    adipisicing
+                                                    elit.
+                                                    Necessitatibus magni modi, adipisci cumque, minus nulla tenetur
+                                                    pariatur
+                                                </p>
+                                            </div>
+                                        </label>
 
-                                    <label class="singl__form-label" for="date">
-                                        <p>Дата основного релиза</p>
-                                        <input class="singl__form-input" type="date" name="date" placeholder="Дата">
-                                        <div class="tultip">
-                                            <button class="tultip__btn">
-                                                <svg class="tultip__icon">
-                                                    <use xlink:href="#tultip"></use>
-                                                </svg>
-                                            </button>
-                                            <p class="tultip__content">Lorem ipsum dolor sit, amet consectetur
-                                                adipisicing
-                                                elit.
-                                                Necessitatibus magni modi, adipisci cumque, minus nulla tenetur pariatur
-                                            </p>
-                                        </div>
-                                    </label>
-                                    <label class="singl__form-label" for="data-tik">
-                                        <p>дата выхода в Tik Tok</p>
-                                        <input class="singl__form-input" type="date" name="data-tik">
-                                        <div class="tultip">
-                                            <button class="tultip__btn">
-                                                <svg class="tultip__icon">
-                                                    <use xlink:href="#tultip"></use>
-                                                </svg>
-                                            </button>
-                                            <p class="tultip__content">Lorem ipsum dolor sit, amet consectetur
-                                                adipisicing
-                                                elit.
-                                                Necessitatibus magni modi, adipisci cumque, minus nulla tenetur pariatur
-                                            </p>
-                                        </div>
-                                    </label>
-                                </div>
-                                <button class="btn header__link link singl__form-btn" type="submit">
-                                    <span class="link__line link__line--top"></span>
-                                    <span class="link__line link__line--right"></span>
-                                    <span class="link__line link__line--bottom"></span>
-                                    <span class="link__line link__line--left"></span>
-                                    Далее</button>
+                                        <label class="singl__form-label" for="date">
+                                            <p>Дата основного релиза</p>
+                                            <input class="singl__form-input" type="date" id="date" placeholder="Дата">
+                                            <div class="tultip">
+                                                <button class="tultip__btn" type="button">
+                                                    <svg class="tultip__icon">
+                                                        <use xlink:href="#tultip"></use>
+                                                    </svg>
+                                                </button>
+                                                <p class="tultip__content">Lorem ipsum dolor sit, amet consectetur
+                                                    adipisicing
+                                                    elit.
+                                                    Necessitatibus magni modi, adipisci cumque, minus nulla tenetur
+                                                    pariatur
+                                                </p>
+                                            </div>
+                                        </label>
+                                        <label class="singl__form-label" for="data-tik">
+                                            <p>дата выхода в Tik Tok</p>
+                                            <input class="singl__form-input" type="date" id="data-tik">
+                                            <div class="tultip">
+                                                <button class="tultip__btn">
+                                                    <svg class="tultip__icon">
+                                                        <use xlink:href="#tultip"></use>
+                                                    </svg>
+                                                </button>
+                                                <p class="tultip__content">Lorem ipsum dolor sit, amet consectetur
+                                                    adipisicing
+                                                    elit.
+                                                    Necessitatibus magni modi, adipisci cumque, minus nulla tenetur
+                                                    pariatur
+                                                </p>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <button class="btn header__link link singl__form-btn" type="submit">
+                                        <span class="link__line link__line--top"></span>
+                                        <span class="link__line link__line--right"></span>
+                                        <span class="link__line link__line--bottom"></span>
+                                        <span class="link__line link__line--left"></span>
+                                        Далее</button>
+                                </form>
+                            </div>
+                            <div class="download__section-step3 section-hidden" data-step="three">
+                                <h2 class="download__title">Нужны аудио</h2>
+                                <form class="singl__form-audio" action="POST">
+                                    <h6 class="singl__form-title">Загрузите WAV файл(ы)</h6>
+                                    <div class="singl__form-inner">
+                                        <input class="singl__form-file" id="audio" type="file" accept="audio/wav">
+                                        <label class="singl__form-label" for="audio">
+                                            <span>+</span>
+                                        </label>
+                                    </div>
+                                    <button class="btn header__link link singl__form-btn" type="submit">
+                                        <span class="link__line link__line--top"></span>
+                                        <span class="link__line link__line--right"></span>
+                                        <span class="link__line link__line--bottom"></span>
+                                        <span class="link__line link__line--left"></span>
+                                        Загрузить</button>
+                                </form>
                             </div>
                         </div>
+
+
                         <div class="download__section album section-hidden" id="addAlbum" data-name="album">
                             add Album
                         </div>
