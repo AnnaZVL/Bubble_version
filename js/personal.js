@@ -153,13 +153,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const $btnAddLink= document.getElementById('addLink')
 
-    // Смена секций 
+    // Смена секций загрузить песню или альбом
     const $btnAdd = document.querySelectorAll('.download__btn'),        
         $questions = document.getElementById('questions'),
         $sections = document.querySelectorAll('.download__section')
-        $addSingl = document.getElementById('addSingl'),
-        $addAlbum = document.getElementById('addAlbum');
-
+        $steps = document.querySelectorAll('.steps__item');
+       
     $btnAdd.forEach(btn => {    
         btn.addEventListener('click', (event) => {
             const currentBtn = event.target.closest('.download__btn');
@@ -167,36 +166,30 @@ document.addEventListener("DOMContentLoaded", () => {
             if (currentBtn) {
                 $btnAdd.forEach(btn => {
                     btn.classList.toggle('active');
-                })
+                });
 
                 $sections.forEach(item => {
                     item.classList.add('section-hidden')
                     if (item.dataset.name === currentBtn.dataset.name) {
                         item.classList.remove('section-hidden')
-                    }
-                })
-                // $addSingl.classList.remove('section-hidden');
-                
+                    };
+                });
+
+         
+                $steps[1].classList.add('active')
+             
+      
                 $questions.classList.add('section-hidden');
                 currentBtn.classList.add('active');
             }
-            // if (currentBtn && currentBtn.dataset.name === btn.dataset.name) {
-            //     console.log(currentBtn.dataset.name, btn.dataset.name);
-            //     btn.classList.add('active');
-            // } else {
-            //     console.log('no', currentBtn.dataset.name, btn.dataset.name);
-            //     btn.classList.remove('active');
-            // }
             
-            // if (currentBtn && currentBtn.dataset.name === btn.dataset.name) {               
-            //     btn.classList.remove('active');
-            //     currentBtn.classList.add('active');
-            //     
-            // } 
-            // else {
-            //     btn.classList.remove('active');
-            // }      
         })
     })
+
+    // настройка Выбора жанра
+    const element = document.getElementById('genre');
+    const choices = new Choices(element, {
+        searchEnabled: false,
+    });
 
 })

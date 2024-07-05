@@ -7,6 +7,7 @@
     <title>Personal_Page</title>
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/personal.css">
 </head>
@@ -198,6 +199,27 @@
                 <path d="M42.5,43h-16c-0.552,0-1,0.447-1,1s0.448,1,1,1h16c0.552,0,1-0.447,1-1S43.052,43,42.5,43z" />
                 <path
                     d="M22.875,40.219l-4.301,3.441l-1.367-1.367c-0.391-0.391-1.023-0.391-1.414,0s-0.391,1.023,0,1.414l2,2 C17.987,45.901,18.243,46,18.5,46c0.22,0,0.441-0.072,0.624-0.219l5-4c0.432-0.346,0.501-0.975,0.156-1.406 C23.936,39.943,23.306,39.874,22.875,40.219z" />
+            </g>
+        </symbol>
+        <symbol id="tultip" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;"
+            xml:space="preserve">
+            <g>
+                <g>
+                    <path
+                        d="M256,0C120.477,0,10.224,110.255,10.224,245.778c0,62.171,23.12,121.186,65.206,166.725l-13.707,88.342 c-0.558,3.601,0.953,7.208,3.91,9.336c1.677,1.207,3.657,1.82,5.647,1.82c1.52,0,3.046-0.357,4.447-1.083l79.241-41.036 c31.825,14.386,65.788,21.675,101.032,21.675c135.521,0,245.778-110.255,245.778-245.778C501.778,110.255,391.523,0,256,0z M256,472.211c-33.973,0-66.646-7.347-97.114-21.835c-2.731-1.3-5.914-1.245-8.601,0.146l-66.524,34.45l11.51-74.177 c0.463-2.982-0.493-6.007-2.582-8.184c-40.704-42.373-63.121-98.072-63.121-156.835C29.568,120.922,131.145,19.344,256,19.344 s226.433,101.577,226.433,226.433S380.856,472.211,256,472.211z" />
+                </g>
+            </g>
+            <g>
+                <g>
+                    <path
+                        d="M256,70.708c-28.236,0-51.208,22.972-51.208,51.208c0,28.236,22.972,51.208,51.208,51.208 c28.238,0,51.208-22.972,51.208-51.208C307.208,93.678,284.236,70.708,256,70.708z M256,153.78 c-17.57,0-31.864-14.294-31.864-31.864S238.43,90.052,256,90.052c17.571,0,31.864,14.294,31.864,31.864S273.57,153.78,256,153.78z " />
+                </g>
+            </g>
+            <g>
+                <g>
+                    <path
+                        d="M312.758,357.74h-11.013V199.148c0-5.342-4.331-9.672-9.672-9.672h-92.828c-5.342,0-9.672,4.331-9.672,9.672v32.143 c0,5.342,4.331,9.672,9.672,9.672h11.013v116.777h-11.013c-5.342,0-9.672,4.331-9.672,9.672v32.143 c0,5.343,4.331,9.673,9.672,9.673h113.514c5.342,0,9.672-4.331,9.672-9.672v-32.143C322.43,362.071,318.099,357.74,312.758,357.74 z M303.085,389.884h-94.17v-12.8h11.013c5.342,0,9.672-4.331,9.672-9.672V231.291c0-5.342-4.331-9.672-9.672-9.672h-11.013 v-12.798H282.4v158.593c0,5.342,4.331,9.672,9.672,9.672h11.013V389.884z" />
+                </g>
             </g>
         </symbol>
     </svg>
@@ -864,7 +886,111 @@
                             </div>
                         </div>
                         <div class="download__section singl section-hidden" id="addSingl" data-name="singl">
-                            add Singl
+                            <h2 class="download__title">Информация о релизе</h2>
+                            <div class="singl__form">
+                                <h6 class="singl__form-title">Выберите жанр</h6>
+                                <select class="singl__form-select" name="genre" id="genre">
+                                    <option value="pop"></option>
+                                    <option value="rok">Рок-музыка</option>
+                                    <option value="jas"></option>
+                                </select>
+                                <div class="singl__box">
+                                    <h6 class="singl__form-title">Обложка</h6>
+                                    <div class="tultip">
+                                        <button class="tultip__btn">
+                                            <svg class="tultip__icon">
+                                                <use xlink:href="#tultip"></use>
+                                            </svg>
+                                        </button>
+                                        <p class="tultip__content">Lorem ipsum dolor sit, amet consectetur adipisicing
+                                            elit.
+                                            Necessitatibus magni modi, adipisci cumque, minus nulla tenetur pariatur
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="singl__form-inner">
+                                    <input class="singl__form-img" name="img" type="file">
+                                    <label class="singl__form-label" for="img">
+                                        <span>+</span>
+                                    </label>
+                                </div>
+                                <div class="singl__form-wrapper">
+                                    <label class="singl__form-label" for="name">
+                                        <p>Исполнитель</p>
+                                        <input class="singl__form-input" type="text" name="name"
+                                            placeholder="Исполнитель">
+                                        <div class="tultip">
+                                            <button class="tultip__btn">
+                                                <svg class="tultip__icon">
+                                                    <use xlink:href="#tultip"></use>
+                                                </svg>
+                                            </button>
+                                            <p class="tultip__content">Lorem ipsum dolor sit, amet consectetur
+                                                adipisicing
+                                                elit.
+                                                Necessitatibus magni modi, adipisci cumque, minus nulla tenetur pariatur
+                                            </p>
+                                        </div>
+                                    </label>
+
+                                    <label class="singl__form-label" for="title">
+                                        <p>Название релиза</p>
+                                        <input class="singl__form-input" type="text" name="title"
+                                            placeholder="Название релиза">
+                                        <div class="tultip">
+                                            <button class="tultip__btn">
+                                                <svg class="tultip__icon">
+                                                    <use xlink:href="#tultip"></use>
+                                                </svg>
+                                            </button>
+                                            <p class="tultip__content">Lorem ipsum dolor sit, amet consectetur
+                                                adipisicing
+                                                elit.
+                                                Necessitatibus magni modi, adipisci cumque, minus nulla tenetur pariatur
+                                            </p>
+                                        </div>
+                                    </label>
+
+                                    <label class="singl__form-label" for="date">
+                                        <p>Дата основного релиза</p>
+                                        <input class="singl__form-input" type="date" name="date" placeholder="Дата">
+                                        <div class="tultip">
+                                            <button class="tultip__btn">
+                                                <svg class="tultip__icon">
+                                                    <use xlink:href="#tultip"></use>
+                                                </svg>
+                                            </button>
+                                            <p class="tultip__content">Lorem ipsum dolor sit, amet consectetur
+                                                adipisicing
+                                                elit.
+                                                Necessitatibus magni modi, adipisci cumque, minus nulla tenetur pariatur
+                                            </p>
+                                        </div>
+                                    </label>
+                                    <label class="singl__form-label" for="data-tik">
+                                        <p>дата выхода в Tik Tok</p>
+                                        <input class="singl__form-input" type="date" name="data-tik">
+                                        <div class="tultip">
+                                            <button class="tultip__btn">
+                                                <svg class="tultip__icon">
+                                                    <use xlink:href="#tultip"></use>
+                                                </svg>
+                                            </button>
+                                            <p class="tultip__content">Lorem ipsum dolor sit, amet consectetur
+                                                adipisicing
+                                                elit.
+                                                Necessitatibus magni modi, adipisci cumque, minus nulla tenetur pariatur
+                                            </p>
+                                        </div>
+                                    </label>
+                                </div>
+                                <button class="btn header__link link singl__form-btn" type="submit">
+                                    <span class="link__line link__line--top"></span>
+                                    <span class="link__line link__line--right"></span>
+                                    <span class="link__line link__line--bottom"></span>
+                                    <span class="link__line link__line--left"></span>
+                                    Далее</button>
+                            </div>
                         </div>
                         <div class="download__section album section-hidden" id="addAlbum" data-name="album">
                             add Album
@@ -937,6 +1063,7 @@
             </div>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="../js/personal.js"></script>
 </body>
