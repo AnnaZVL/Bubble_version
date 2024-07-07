@@ -156,39 +156,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const $btnAddLink= document.getElementById('addLink')
 
-    // Смена секций загрузить песню или альбом
-    const $btnAdd = document.querySelectorAll('.download__btn'),        
-        $questions = document.getElementById('questions'),
-        $sections = document.querySelectorAll('.download__section')
-        $steps = document.querySelectorAll('.steps__item');
-       
-    $btnAdd.forEach(btn => {    
-        btn.addEventListener('click', (event) => {
-            const currentBtn = event.target.closest('.download__btn');
-
-            if (currentBtn) {
-                $btnAdd.forEach(btn => {
-                    btn.classList.remove('active');
-                });
-
-                $sections.forEach(item => {
-                    item.classList.add('section-hidden')
-                    if (item.dataset.name === currentBtn.dataset.name) {
-                        item.classList.remove('section-hidden')
-                    };
-                });
-
-         
-                $steps[1].classList.add('active')
-             
-      
-                $questions.classList.add('section-hidden');
-                currentBtn.classList.add('active');
-            }
-            
-        })
-    })
-
     // настройка Выбора жанра
     const element = document.getElementById('genre');
     const choices = new Choices(element, {
@@ -197,23 +164,51 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Шаги добавления песни
-    const $btnStepTwo = document.querySelector('.singl__form-btn'),
-        $singlForm = document.querySelector('.singl__form'),
-        $singlFormAudio = document.querySelector('.singl__form-audio'),
-        $sectionStepTwo = document.querySelector('.download__section-step2'),
-        $sectionStepThree = document.querySelector('.download__section-step3');
-
-        $singlForm.addEventListener('submit', (event) => {
-            event.preventDefault();
-            $sectionStepTwo.classList.add('section-hidden');
-            $sectionStepThree.classList.remove('section-hidden');
-
-            $steps[2].classList.add('active')
+    const $stepSections = document.querySelectorAll('.step__section'),
+        $steps = document.querySelectorAll('.steps__item'),
+        $btnSteps = document.querySelectorAll('.step__btn'),
+        $formTwo = document.querySelector('.form-two'),
+        $formThree = document.querySelector('.form-three'),
+        $formFour = document.querySelector('.form-four'),
+        $formFive = document.querySelector('.form-five'),
+        $formPromo = document.querySelector('.promo__form'),
+        $addedSingl = document.querySelector('.added-singl');
+        
+    $btnSteps.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const currentStep = btn.dataset.step;
+             
+            $stepSections.forEach(item => {
+                
+                if (item.dataset.step === currentStep) {
+                    item.classList.remove('section-hidden');
+                    $steps[currentStep - 1].classList.add('active')
+                } else {
+                    item.classList.add('section-hidden');
+                }
+            })
         })
+    })
 
-        $singlFormAudio.addEventListener('submit', (event) => {
-            event.preventDefault();
+    $formTwo.addEventListener('submit', (event) => {
+        event.preventDefault();       
+    });
 
-            $steps[3].classList.add('active');
-        })
+    $formThree.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        $addedSingl.style.display = 'flex';            
+    })
+
+    $formFour.addEventListener('submit', (event) => {
+        event.preventDefault();       
+    });
+
+    $formFive.addEventListener('submit', (event) => {
+        event.preventDefault();       
+    });
+
+    $formPromo.addEventListener('submit', (event) => {
+        event.preventDefault();       
+    });
 })

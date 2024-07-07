@@ -292,7 +292,7 @@ body {
     color: var(--color-white);
     position: relative;
     overflow: hidden;
-    font-size: 18pz;
+    font-size: 18px;
     -webkit-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
