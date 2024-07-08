@@ -248,6 +248,21 @@
                 </g>
             </g>
         </symbol>
+        <symbol id="change" x="0px" y="0px" viewBox="0 0 59.985 59.985" style="enable-background:new 0 0 59.985 59.985;"
+            xml:space="preserve">
+            <path
+                d="M59.985,7c0-1.87-0.728-3.627-2.05-4.949S54.855,0,52.985,0s-3.627,0.729-4.95,2.051l-1.414,1.414l-4.243,4.242l0,0 L4.536,45.551c-0.11,0.109-0.192,0.243-0.242,0.391L0.051,58.669c-0.12,0.359-0.026,0.756,0.242,1.023 c0.19,0.19,0.446,0.293,0.707,0.293c0.106,0,0.212-0.017,0.316-0.052l12.728-4.243c0.147-0.049,0.281-0.132,0.391-0.241 l37.843-37.843l0,0l4.242-4.242l0,0l1.415-1.415C59.257,10.627,59.985,8.87,59.985,7z M52.278,14.778l-7.071-7.071l1.414-1.414 l7.071,7.071L52.278,14.778z M5.68,48.109l6.197,6.196l-9.296,3.099L5.68,48.109z M13.728,53.328l-7.071-7.07L43.793,9.121 l7.071,7.071L13.728,53.328z M55.106,11.95l-7.071-7.071l1.414-1.414C50.394,2.521,51.65,2,52.985,2s2.591,0.521,3.536,1.465 s1.464,2.2,1.464,3.535s-0.52,2.591-1.464,3.535L55.106,11.95z" />
+        </symbol>
+        <symbol id="delete" viewBox="-40 0 427 427.00131">
+            <path
+                d="m232.398438 154.703125c-5.523438 0-10 4.476563-10 10v189c0 5.519531 4.476562 10 10 10 5.523437 0 10-4.480469 10-10v-189c0-5.523437-4.476563-10-10-10zm0 0" />
+            <path
+                d="m114.398438 154.703125c-5.523438 0-10 4.476563-10 10v189c0 5.519531 4.476562 10 10 10 5.523437 0 10-4.480469 10-10v-189c0-5.523437-4.476563-10-10-10zm0 0" />
+            <path
+                d="m28.398438 127.121094v246.378906c0 14.5625 5.339843 28.238281 14.667968 38.050781 9.285156 9.839844 22.207032 15.425781 35.730469 15.449219h189.203125c13.527344-.023438 26.449219-5.609375 35.730469-15.449219 9.328125-9.8125 14.667969-23.488281 14.667969-38.050781v-246.378906c18.542968-4.921875 30.558593-22.835938 28.078124-41.863282-2.484374-19.023437-18.691406-33.253906-37.878906-33.257812h-51.199218v-12.5c.058593-10.511719-4.097657-20.605469-11.539063-28.03125-7.441406-7.421875-17.550781-11.5546875-28.0625-11.46875h-88.796875c-10.511719-.0859375-20.621094 4.046875-28.0625 11.46875-7.441406 7.425781-11.597656 17.519531-11.539062 28.03125v12.5h-51.199219c-19.1875.003906-35.394531 14.234375-37.878907 33.257812-2.480468 19.027344 9.535157 36.941407 28.078126 41.863282zm239.601562 279.878906h-189.203125c-17.097656 0-30.398437-14.6875-30.398437-33.5v-245.5h250v245.5c0 18.8125-13.300782 33.5-30.398438 33.5zm-158.601562-367.5c-.066407-5.207031 1.980468-10.21875 5.675781-13.894531 3.691406-3.675781 8.714843-5.695313 13.925781-5.605469h88.796875c5.210937-.089844 10.234375 1.929688 13.925781 5.605469 3.695313 3.671875 5.742188 8.6875 5.675782 13.894531v12.5h-128zm-71.199219 32.5h270.398437c9.941406 0 18 8.058594 18 18s-8.058594 18-18 18h-270.398437c-9.941407 0-18-8.058594-18-18s8.058593-18 18-18zm0 0" />
+            <path
+                d="m173.398438 154.703125c-5.523438 0-10 4.476563-10 10v189c0 5.519531 4.476562 10 10 10 5.523437 0 10-4.480469 10-10v-189c0-5.523437-4.476563-10-10-10zm0 0" />
+        </symbol>
     </svg>
     <div class="wrapper">
         <header class="header-personal">
@@ -266,7 +281,7 @@
                         Загрузить</button>
                     <div class="header__box">
                         <ul class="header__box-list">
-                            <li class="header__box-item">
+                            <li class="header__box-item" data-content="distribSection">
                                 <button class="header__box-btn btn" id="downloadDistrib">
                                     <svg class="header__box-icon">
                                         <use xlink:href="#distr"></use>
@@ -309,7 +324,7 @@
                     <div class="aside-personal__inner">
                         <div class="aside-personal__box">
                             <ul class="aside-personal__menu aside-menu visible">
-                                <li class="personal__item aside-menu__item active">
+                                <li class="personal__item aside-menu__item active" data-content="home">
                                     <button class="btn aside-menu__btn">
                                         <svg class="aside-menu__icon">
                                             <use xlink:href="#home"></use>
@@ -317,7 +332,7 @@
                                         <span> Главная</span>
                                     </button>
                                 </li>
-                                <li class="personal__item aside-menu__item">
+                                <li class="personal__item aside-menu__item" data-content="event">
                                     <button class="btn aside-menu__btn">
                                         <svg class="aside-menu__icon">
                                             <use xlink:href="#calendar"></use>
@@ -340,32 +355,32 @@
                             </button>
                             <h4 class="aside-menu__title">Дистрибуция</h4>
                             <ul class="aside-personal__menu aside-menu" data-menu="1">
-                                <li class="personal__item aside-menu__item">
-                                    <button class="btn aside-menu__btn" id="1">
+                                <li class="personal__item aside-menu__item" data-content="catalog">
+                                    <button class="btn aside-menu__btn">
                                         <svg class="aside-menu__icon">
                                             <use xlink:href="#distr"></use>
                                         </svg>
                                         <span>Мой каталог</span>
                                     </button>
                                 </li>
-                                <li class="personal__item aside-menu__item">
-                                    <button class="btn aside-menu__btn" id="2">
+                                <li class="personal__item aside-menu__item" data-content="static">
+                                    <button class="btn aside-menu__btn">
                                         <svg class="aside-menu__icon">
                                             <use xlink:href="#static"></use>
                                         </svg>
                                         <span>Статистика</span>
                                     </button>
                                 </li>
-                                <li class="personal__item aside-menu__item">
-                                    <button class="btn aside-menu__btn" id="3">
+                                <li class="personal__item aside-menu__item" data-content="multilink">
+                                    <button class="btn aside-menu__btn">
                                         <svg class="aside-menu__icon">
                                             <use xlink:href="#link"></use>
                                         </svg>
                                         <span>Мультиссылка</span>
                                     </button>
                                 </li>
-                                <li class="personal__item aside-menu__item">
-                                    <button class="btn aside-menu__btn" id="4">
+                                <li class="personal__item aside-menu__item" data-content="support">
+                                    <button class="btn aside-menu__btn">
                                         <svg class="aside-menu__icon">
                                             <use xlink:href="#support"></use>
                                         </svg>
@@ -377,7 +392,7 @@
                     </div>
                 </aside>
                 <article class="personal-content">
-                    <div class="personal__hero active-content" id="hero">
+                    <div class="personal__hero section__content active-content" data-content="home">
                         <section class="personal-section news">
                             <h2 class="personal-section__title">новости</h2>
                             <div class="new__top">
@@ -528,7 +543,7 @@
                             </div>
                         </section>
                     </div>
-                    <div class="personal__event" id="event">
+                    <div class="personal__event section__content" data-content="event">
                         <section class="personal-section newEvent">
                             <h2 class="personal-section__title">События</h2>
                             <div class="newEvent__cards">
@@ -827,7 +842,99 @@
                             </div>
                         </section>
                     </div>
-                    <div class="download" id="distribSection">
+                    <div class="personal__catalog section__content" data-content="catalog">
+                        <section class="catalog">
+                            <div class="catalog__header">
+                                <h5 class="catalog__title">Мой каталог</h5>
+                                <span class="catalog__header--text">Статистика</span>
+                                <select class="catalog__filter" name="filtr" id="filter">
+                                    <option value="autor">По исполнителю</option>
+                                    <option value="name">По названию</option>
+                                    <option value="status">По статусу</option>
+                                </select>
+                            </div>
+                            <div class="catalog__list">
+                                <div class="catalog__item">
+                                    <div class="catalog__item--info">
+                                        <img class="catalog__item--img" src="../images/personal_page/albums/Miller.jpg"
+                                            alt="Обложка песни">
+                                        <div class="catalog__item--content">
+                                            <h5 class="catalog__item--name">Название песни</h5>
+                                            <span class="catalog__item--autor">Имя Исполнителя</span>
+                                            <span class="catalog__item--date">15.03.24</span>
+                                        </div>
+                                    </div>
+                                    <div class="catalog__item--inner">
+                                        <div class="catalog__item--status">
+                                            <span class="catalog__item--text">ожидание</span>
+                                        </div>
+                                        <div class="catalog__item--box">
+                                            <p class="catalog__item--descr">UPC</p>
+                                            <p class="catalog__item--descr">IRSC</p>
+                                        </div>
+                                    </div>
+                                    <div class="catalog__item--actions">
+                                        <button class="catalog__item--pay">Оплатить</button>
+                                        <div class="catalog__item--buttons">
+                                            <button class="btn catalog__item--btn" title="Редактировать">
+                                                <svg class="catalog__item--icon">
+                                                    <use xlink:href="#change"></use>
+                                                </svg>
+                                            </button>
+                                            <button class="btn catalog__item--btn" title="Удалить">
+                                                <svg class="catalog__item--icon">
+                                                    <use xlink:href="#delete"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__item">
+                                    <div class="catalog__item--info">
+                                        <img class="catalog__item--img" src="../images/personal_page/albums/Miller.jpg"
+                                            alt="Обложка песни">
+                                        <div class="catalog__item--content">
+                                            <h5 class="catalog__item--name">Название песни</h5>
+                                            <span class="catalog__item--autor">Имя Исполнителя</span>
+                                            <span class="catalog__item--date">15.03.24</span>
+                                        </div>
+                                    </div>
+                                    <div class="catalog__item--inner">
+                                        <div class="catalog__item--status">
+                                            <span class="catalog__item--text green">загружено</span>
+                                        </div>
+                                    </div>
+                                    <div class="catalog__item--actions">
+                                        <div class="catalog__item--buttons">
+                                            <button class="btn catalog__item--btn" title="Ссылка">
+                                                <svg class="catalog__item--icon">
+                                                    <use xlink:href="#link"></use>
+                                                </svg>
+                                            </button>
+                                            <button class="btn catalog__item--btn" title="Статистика">
+                                                <svg class="catalog__item--icon">
+                                                    <use xlink:href="#static"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <div class="catalog__item--buttons">
+                                            <button class="btn catalog__item--btn" title="Редактировать">
+                                                <svg class="catalog__item--icon">
+                                                    <use xlink:href="#change"></use>
+                                                </svg>
+                                            </button>
+                                            <button class="btn catalog__item--btn" title="Удалить">
+                                                <svg class="catalog__item--icon">
+                                                    <use xlink:href="#delete"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="download section__content" data-content="distribSection">
                         <div class="download__top step">
                             <ul class="steps__list">
                                 <li class="steps__item active">

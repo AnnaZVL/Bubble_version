@@ -22,30 +22,37 @@ document.addEventListener("DOMContentLoaded", () => {
             })
     })
 
-    //Смена активного пункта в боковой панели
-    const asideMenu = document.querySelector('.aside-menu'),
-        $heroBlock = document.getElementById('hero'),
-        $eventBlock = document.getElementById('event');
+    //Смена активного пункта в боковой панели и секции основного контента
+    const $asideMenuAll = document.querySelectorAll('.aside-menu__item'),
+        $sectionsContent = document.querySelectorAll('.section__content');
 
-    asideMenu.addEventListener('click', (event) => {
-        const target = event.target;
-        const asideMenuItem = target.closest('.aside-menu__item');
+    $asideMenuAll.forEach(item => {    
+        item.addEventListener('click', (event) => {
+            const target = event.target;
+            const asideMenuItem = target.closest('.aside-menu__item');
+            
+            if (asideMenuItem) {                   
+                $asideMenuAll.forEach(i => i.classList.remove('active'))
+                asideMenuItem.classList.add('active') 
 
-        if (asideMenuItem) {            
-            document.querySelectorAll('.aside-menu__item').forEach(item => item.classList.remove('active'));
-
-            asideMenuItem.classList.add('active');
-            $eventBlock.classList.toggle('active-content');
-            $heroBlock.classList.toggle('active-content');
-        }
-    });
+                $sectionsContent.forEach(content => {
+                    if (content.dataset.content === asideMenuItem.dataset.content) {
+                        content.classList.add('active-content');
+                                         
+                    } else {
+                        content.classList.remove('active-content');    
+                                    
+                    }
+                });
+            }
+        });
+    })
 
     // Смена лайка
     const $btnLikeAll = document.querySelectorAll('.track__like')
 
     $btnLikeAll.forEach(like => {
-        like.addEventListener('click', (event) => {
-            console.log('object');
+        like.addEventListener('click', (event) => {            
             like.classList.toggle('like')
         })
     })
@@ -142,13 +149,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Кнопка Релиз на дистрибуцию
-    const $btnDownloadDistrib = document.getElementById('downloadDistrib'),
-    $distribSection = document.getElementById('distribSection');
+    const $btnDownloadDistrib = document.getElementById('downloadDistrib');
 
     $btnDownloadDistrib.addEventListener('click', () => {
-        $eventBlock.classList.remove('active-content');
-        $heroBlock.classList.remove('active-content');
-        $distribSection.classList.add('active-content');
+        $sectionsContent.forEach(content => {           
+            content.classList.remove('active-content');
+            if (content.dataset.content === 'distribSection') {
+                content.classList.add('active-content');
+            }
+        })
+      
         $list.classList.remove('show');
     })
 
@@ -157,8 +167,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const $btnAddLink= document.getElementById('addLink')
 
     // настройка Выбора жанра
-    const element = document.getElementById('genre');
-    const choices = new Choices(element, {
+    const $ganre = document.getElementById('genre');
+    const choicesGenre = new Choices($ganre, {
         searchEnabled: false,
         allowHTML: true
     });
@@ -210,5 +220,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     $formPromo.addEventListener('submit', (event) => {
         event.preventDefault();       
+    });
+
+    // Фильтрация каталога
+    const $filter = document.getElementById('filter');
+    const choicesFilter = new Choices($filter, {
+        searchEnabled: false,
+        allowHTML: true
     });
 })
