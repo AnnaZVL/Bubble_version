@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal_Page</title>
     <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
+    <link rel="stylesheet" href="../libs/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../libs/choices.min.css" />
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/personal.css">
+
 </head>
 
 <body>
@@ -290,7 +291,7 @@
                                 </button>
                             </li>
                             <li class="header__box-item">
-                                <button class="header__box-btn btn" id="downloadMinus">
+                                <button class="header__box-btn btn" id="downloadMinus" disabled>
                                     <svg class="header__box-icon">
                                         <use xlink:href="#minus"></use>
                                     </svg>
@@ -298,7 +299,7 @@
                                 </button>
                             </li>
                             <li class="header__box-item">
-                                <button class="header__box-btn btn" id="addLink">
+                                <button class="header__box-btn btn" id="addLink" disabled>
                                     <svg class="header__box-icon">
                                         <use xlink:href="#link"></use>
                                     </svg>
@@ -364,7 +365,7 @@
                                     </button>
                                 </li>
                                 <li class="personal__item aside-menu__item" data-content="static">
-                                    <button class="btn aside-menu__btn">
+                                    <button class="btn aside-menu__btn" disabled>
                                         <svg class="aside-menu__icon">
                                             <use xlink:href="#static"></use>
                                         </svg>
@@ -372,7 +373,7 @@
                                     </button>
                                 </li>
                                 <li class="personal__item aside-menu__item" data-content="multilink">
-                                    <button class="btn aside-menu__btn">
+                                    <button class="btn aside-menu__btn" disabled>
                                         <svg class="aside-menu__icon">
                                             <use xlink:href="#link"></use>
                                         </svg>
@@ -380,7 +381,7 @@
                                     </button>
                                 </li>
                                 <li class="personal__item aside-menu__item" data-content="support">
-                                    <button class="btn aside-menu__btn">
+                                    <button class="btn aside-menu__btn" disabled>
                                         <svg class="aside-menu__icon">
                                             <use xlink:href="#support"></use>
                                         </svg>
@@ -1401,8 +1402,8 @@
             </div>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../libs/choices.min.js"></script>
+    <script src="../libs/swiper-bundle.min.js"></script>
     <script src="../js/personal.js"></script>
 </body>
 
