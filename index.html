@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./css/media.css">
 </head>
 
-<body class="isoverflow">
+<body>
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
         <symbol id="logo" width="100" zoomAndPan="magnify" viewBox="0 0 375 374.999991" height="80"
             preserveAspectRatio="xMidYMid meet" version="1.0">
@@ -58,13 +58,88 @@
 
         </symbol>
     </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <defs>
+            <linearGradient id="icon-grad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#fff" />
+                <stop offset="100%" stop-color="#222" />
+            </linearGradient>
+            <mask id="icon-mask">
+                <rect x="0" y="0" width="24" height="24" fill="url(#icon-grad)" />
+            </mask>
+            <symbol id="user" viewBox="0 0 48 48">
+                <g fill="hsl(0,0%,100%)" mask="url(#icon-mask)">
+                    <path
+                        d="m24 10a8.38 8.38 0 1 0 8.38 8.38 8.39 8.39 0 0 0 -8.38-8.38zm0 14.76a6.38 6.38 0 1 1 6.38-6.38 6.38 6.38 0 0 1 -6.38 6.38z" />
+                    <path
+                        d="m24 3a22 22 0 1 0 22 22 22 22 0 0 0 -22-22zm-9.54 39.56v-5.56a6 6 0 0 1 6-6h7.08a6 6 0 0 1 6 6v5.59c-4.77 3.16-14.22 3.46-19.08-.03zm21.08-1.25v-4.31a8 8 0 0 0 -8-8h-7.08a8 8 0 0 0 -8 8v4.34a20 20 0 1 1 23.08 0z" />
+                </g>
+            </symbol>
+            <symbol id="support" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;"
+                xml:space="preserve">
+                <g>
+                    <g>
+                        <path
+                            d="M366,396c-5.52,0-10,4.48-10,10c0,5.52,4.48,10,10,10c5.52,0,10-4.48,10-10C376,400.48,371.52,396,366,396z" />
+                    </g>
+                </g>
+                <g fill="hsl(0,0%,100%)" mask="url(#icon-mask)">
+                    <g>
+                        <path
+                            d="M390.622,363.663l-47.53-15.84l-17.063-34.127c15.372-15.646,26.045-36.348,29.644-57.941L357.801,243H376 c16.542,0,30-13.458,30-30v-63C406,67.29,338.71,0,256,0c-82.922,0-150,67.097-150,150v63c0,13.036,8.361,24.152,20,28.28V253 c0,16.542,13.458,30,30,30h8.782c4.335,9.417,9.946,18.139,16.774,25.974c1.416,1.628,2.893,3.206,4.406,4.741l-17.054,34.108 l-47.531,15.841C66.112,382.092,26,440.271,26,502c0,5.523,4.477,10,10,10h440c5.522,0,10-4.477,10-10 C486,440.271,445.889,382.092,390.622,363.663z M386,213c0,5.514-4.486,10-10,10h-15.262c2.542-19.69,4.236-40.643,4.917-61.28 c0.02-0.582,0.036-1.148,0.054-1.72H386V213z M136,223c-5.514,0-10-4.486-10-10v-53h20.298c0.033,1.043,0.068,2.091,0.107,3.146 c0.001,0.036,0.003,0.071,0.004,0.107c0,0.003,0,0.006,0,0.009c0.7,20.072,2.372,40.481,4.856,59.737H136V223z M156,263 c-5.514,0-10-4.486-10-10v-10h8.198l2.128,12.759c0.406,2.425,0.905,4.841,1.482,7.241H156z M146.017,140H126.38 C131.445,72.979,187.377,20,256,20c68.318,0,124.496,52.972,129.619,120h-19.635c-0.72-55.227-45.693-100-101.033-100h-17.9 C191.712,40,146.736,84.773,146.017,140z M247.05,60h17.9c44.809,0,81.076,36.651,81.05,81.41c0,3.147-0.025,5.887-0.078,8.38 c0,0.032-0.001,0.065-0.001,0.098l-12.508-1.787c-33.98-4.852-66.064-20.894-90.342-45.172C241.195,101.054,238.652,100,236,100 c-26.856,0-52.564,12.236-69.558,32.908C170.63,92.189,205.053,60,247.05,60z M178.54,263c-5.006-16.653-10.734-65.653-12-97.053 l13.459-17.946c12.361-16.476,31.592-26.713,52.049-27.888c26.917,25.616,61.739,42.532,98.537,47.786l14.722,2.104 c-0.984,20.885-2.995,41.843-5.876,61.118c-0.001,0.006-0.002,0.013-0.003,0.02c-0.916,6.197-1.638,10.185-3.482,21.324 c-5.296,31.765-28.998,60.49-60.287,68.313c-12.877,3.215-26.443,3.214-39.313,0c-19.537-4.884-37.451-18.402-49.012-37.778 h20.386c4.128,11.639,15.243,20,28.28,20h20c16.575,0,30-13.424,30-30c0-16.542-13.458-30-30-30h-20 c-13.327,0-24.278,8.608-28.297,20H178.54z M235.159,341.016c6.859,1.445,13.852,2.184,20.841,2.184 c5.471,0,10.943-0.458,16.353-1.346l-17.67,18.687L235.159,341.016z M240.935,375.079l-31.718,33.542 c-8.732-16.714-16.235-34.109-22.389-51.917l11.911-23.822L240.935,375.079z M311.566,329.494l13.604,27.209 c-6.164,17.838-13.669,35.239-22.392,51.933l-33.948-33.948L311.566,329.494z M226,273c0-5.521,4.478-10,10-10h20 c5.514,0,10,4.486,10,10c0,5.522-4.479,10-10,10h-20C230.486,283,226,278.514,226,273z M46.4,492 c3.963-49.539,36.932-94.567,81.302-109.363l42.094-14.028c7.712,21.325,17.266,42.052,28.463,61.74 c0.019,0.034,0.037,0.068,0.056,0.101c0,0.001,0.001,0.001,0.001,0.002c8.181,14.389,17.389,28.45,27.372,41.799L237.99,492H46.4z M256,483.086l-13.562-21.773c-0.152-0.244-0.314-0.481-0.486-0.711c-8.098-10.802-15.652-22.099-22.532-33.662l35.663-37.714 l37.578,37.578c-6.926,11.647-14.506,22.991-22.611,33.796C269.56,461.253,270.255,460.224,256,483.086z M274.01,492 l12.301-19.748c10.027-13.4,19.301-27.574,27.564-42.132c0.05-0.088,0.097-0.178,0.147-0.266c0.006-0.011,0.012-0.021,0.018-0.032 c11.055-19.5,20.509-40.047,28.164-61.213l42.093,14.028c44.371,14.796,77.34,59.824,81.303,109.363H274.01z" />
+                    </g>
+                </g>
+                <g>
+                    <g>
+                        <path
+                            d="M435.546,451.531c-6.683-13.377-16.472-25.261-28.309-34.367c-4.378-3.369-10.656-2.55-14.023,1.828 c-3.368,4.378-2.549,10.656,1.828,14.024c9.454,7.273,17.272,16.766,22.611,27.453c2.473,4.949,8.483,6.941,13.415,4.477 C436.008,462.478,438.013,456.472,435.546,451.531z" />
+                    </g>
+                </g>
+            </symbol>
+            <symbol id="manager" viewBox="0 0 9 9">
+                <g fill="hsl(0,0%,100%)" mask="url(#icon-mask)" transform="translate(0 761.333)">
+                    <path
+                        d="m5.0270829-754.18915c0-.43517-.359624-.7953-.794782-.7953-.43516 0-.792718.36013-.792718.7953 0 .43515.357553.79271.792978.79297l.795557.0008c1.167709 0 2.114553-.94858 2.115116-2.11615.434922-.00027.794266-.3598.794266-.79479v-1.58801c0-.43516-.359619-.79324-.794782-.79324 0-1.16805-.947576-2.11718-2.115635-2.11718h-1.5875c-1.168056 0-2.117182.94913-2.117182 2.11718-.435166 0-.793234.35808-.793234.79324v1.58799c0 .43517.358076.79479.793234.79479h.529166c.435158 0 .792716-.35962.792716-.79479v-1.58801c0-.43516-.357553-.79324-.792716-.79324 0-.88405.703967-1.58801 1.588016-1.58801h1.5875c.884053 0 1.58595.70396 1.58595 1.58801-.435163 0-.792716.35808-.792716.79324v1.58801c0 .43517.357558.79479.793232.79479-.000011.88356-.701731 1.58798-1.585431 1.58698m-3.705717-4.23333h.529166c.151154 0 .265618.11239.265618.26355v1.58801c0 .15117-.114458.26562-.265618.26562h-.529166c-.151159 0-.264068-.11445-.264068-.26562v-1.58801c0-.15116.112914-.26355.264068-.26355zm5.290632 0h.529685c.151154 0 .265615.11239.265615.26355v1.58801c0 .15117-.114456.26562-.265615.26562h-.529685c-.151159 0-.263549-.11445-.263549-.26562v-1.58801c0-.15116.112398-.26355.263549-.26355zm-2.380732 3.70313c.15116 0 .265616.11446.265616.26562 0 .15115-.114464.26355-.265616.26355-.151153 0-.263551-.1124-.263551-.26355 0-.15116.11239-.26562.263551-.26562z"
+                        font-variant-ligatures="normal" font-variant-position="normal" font-variant-caps="normal"
+                        font-variant-numeric="normal" font-variant-alternates="normal" font-variant-east-asian="normal"
+                        font-feature-settings="normal" font-variation-settings="normal" text-indent="0"
+                        text-align="start" text-decoration-line="none" text-decoration-style="solid"
+                        text-decoration-color="rgb(0,0,0)" text-transform="none" text-orientation="mixed"
+                        white-space="normal" shape-padding="0" shape-margin="0" inline-size="0" isolation="auto"
+                        mix-blend-mode="normal" solid-color="rgb(0,0,0)" solid-opacity="1" vector-effect="none"
+                        paint-order="fill markers stroke" />
+                </g>
+            </symbol>
+            <symbol id="more" viewBox="0 0 128 128">
+                <path fill="hsl(0,0%,100%)" mask="url(#icon-mask)"
+                    d="m117 56h-1v-9.52c0-3.69-3-6.48-7-6.48h-58a3 3 0 0 1 -3-3v-6a7.1 7.1 0 0 0 -7-7h-30a6.92 6.92 0 0 0 -7 6.81v89.19a7.91 7.91 0 0 0 8 8h105a6.87 6.87 0 0 0 7-6.71v-58.58a6.87 6.87 0 0 0 -7-6.71zm-109 64v-89.19a2.92 2.92 0 0 1 3-2.81h30a3.08 3.08 0 0 1 3 3v6a7 7 0 0 0 7 7h58c1.49 0 3 .85 3 2.48v9.52h-89a6.87 6.87 0 0 0 -7 6.71v57.29a3.79 3.79 0 0 1 -4 4 4 4 0 0 1 -4-4zm112 1.29a2.87 2.87 0 0 1 -3 2.71h-98a8.24 8.24 0 0 0 1-4v-57.29a2.87 2.87 0 0 1 3-2.71h94a2.87 2.87 0 0 1 3 2.71z" />
+                <circle cx="82" cy="2" r="2" />
+                <circle cx="98" cy="2" r="2" />
+                <circle cx="90" cy="2" r="2" />
+                <circle cx="66" cy="2" r="2" />
+                <circle cx="106" cy="18" r="2" />
+                <circle cx="106" cy="10" r="2" />
+                <circle cx="106" cy="2" r="2" />
+                <circle cx="58" cy="2" r="2" />
+                <circle cx="106" cy="26" r="2" />
+                <circle cx="106" cy="34" r="2" />
+                <circle cx="74" cy="2" r="2" />
+                <circle cx="50" cy="2" r="2" />
+                <circle cx="26" cy="18" r="2" />
+                <circle cx="26" cy="34" r="2" />
+                <circle cx="26" cy="50" r="2" />
+                <circle cx="26" cy="42" r="2" />
+                <circle cx="106" cy="50" r="2" />
+                <circle cx="34" cy="2" r="2" />
+                <circle cx="42" cy="2" r="2" />
+                <circle cx="26" cy="10" r="2" />
+                <circle cx="26" cy="2" r="2" />
+            </symbol>
+        </defs>
+    </svg>
+    <div class="bubl__container" id="bubl">
+    </div>
     <div class="wrapper">
-
-        <div class="bubl__container">
-            <div class="bubl1"></div>
-            <div class="bubl2"></div>
-            <div class="bubl3"></div>
-        </div>
         <header class="header">
             <div class="header__container container">
                 <div class="header__left">
@@ -81,11 +156,15 @@
                     <nav class="header__nav" id="nav">
                         <ul class="header__menu menu">
                             <li class="menu__item">
-                                <a href="#" class="menu__link">Дистрибуция
+                                <a href="#" class="menu__link" data-section="home">Главная
                                 </a>
                             </li>
                             <li class="menu__item">
-                                <a href="#" class="menu__link">Продвижение
+                                <a href="#describ" class="menu__link" data-section="describ">Дистрибуция
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__link" data-section="promotion">Продвижение
                                 </a>
                             </li>
                             <li class="menu__item">
@@ -104,7 +183,7 @@
                     </nav>
                 </div>
                 <div class="header__right">
-                    <a class="header__link link" href="./pages/personal.html">
+                    <a class="header__link link" href="/pages/personal.html">
                         <span class="link__line link__line--top"></span>
                         <span class="link__line link__line--right"></span>
                         <span class="link__line link__line--bottom"></span>
@@ -115,12 +194,11 @@
         </header>
         <main class="main">
             <section class="hero">
-
                 <div class="hero__container container">
                     <div class="hero__content">
-                        <hi class="hero__title">
+                        <h1 class="hero__title">
                             Эксперты в&nbsp;продвижении музыки
-                        </hi>
+                        </h1>
                         <span class="hero__descr">Обеспечиваем прозрачный, индивидуальный и&nbsp;комфортный подход к
                             продвижению и&nbsp;рекламе Ваших релизов.</span>
                         <span class="hero__descr hero__descr--strong">Мы&nbsp;не&nbsp;используем накрутку, только
@@ -158,16 +236,99 @@
                             </div>
                         </div>
                     </div>
-                    <div class="hero__player" style="background-image: url(./images/home_page/hand.png)">
+                    <div class="hero__player">
+                        <img class="hero__img" src="./images/home_page/2hand.png" aria-disabled />
                         <video class="hero__video" id="videoPlayer" autoplay muted>
                         </video>
-                        <!-- <video class="hero__video" id="videoPlayer" src="./images/IG-stories.mp4">
-                        </video> -->
                     </div>
                 </div>
             </section>
+            <div class="all hidden">
+                <section class="destrib" id="describ">
+                    <div class="destrib__container container">
+                        <div class="destrib__content hero__content">
+                            <h1 class="destrib__title hero__title">
+                                Дистрибуция
+                            </h1>
+                            <span class="destrib__descr hero__descr">Обеспечиваем прозрачный, индивидуальный
+                                и&nbsp;комфортный подход к
+                                продвижению и&nbsp;рекламе Ваших релизов.</span>
+                            <span class="destrib__descr hero__descr hero__descr--strong">Мы&nbsp;не&nbsp;используем
+                                накрутку, только
+                                настоящий
+                                результат.</span>
+                            <a class="destrib__link hero__link" href="#" aria-label="Связаться с нами">Загрузить
+                                релиз</a>
+                        </div>
+                    </div>
+                </section>
+                <section class="services">
+                    <div class="container">
+                        <div class="services__container">
+                            <div class="services__cart">
+                                <div class="services__cart--top top-icon top-icon--blue">
+                                    <span class="top-icon__back"></span>
+                                    <span class="top-icon__front">
+                                        <svg class="top-icon__icon" width="24px" height="24px" aria-hidden="true">
+                                            <use xlink:href="#user" />
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="services__cart--bottom">
+                                    <h4 class="services__cart--title">Личный кабинет</h4>
+                                    <p class="services__cart--text">Lorem ipsum, dolor sit amet </p>
+                                </div>
+                            </div>
+                            <div class="services__cart">
+                                <div class="services__cart--top top-icon top-icon--blue">
+                                    <span class="top-icon__back"></span>
+                                    <span class="top-icon__front">
+                                        <svg class="top-icon__icon" width="24px" height="24px" aria-hidden="true">
+                                            <use xlink:href="#support" />
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="services__cart--bottom">
+                                    <h4 class="services__cart--title">Поддержка</h4>
+                                    <p class="services__cart--text">Lorem ipsum, dolor sit amet consectetur adipisicing
+                                        elit. Fugit, magnam?</p>
+                                </div>
+                            </div>
+                            <div class="services__cart">
+                                <div class="services__cart--top top-icon top-icon--blue">
+                                    <span class="top-icon__back"></span>
+                                    <span class="top-icon__front">
+                                        <svg class="top-icon__icon" width="24px" height="24px" aria-hidden="true">
+                                            <use xlink:href="#manager" />
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="services__cart--bottom">
+                                    <h4 class="services__cart--title">Менеджер</h4>
+                                    <p class="services__cart--text">Lorem ipsum, dolor sit amet consectetur adipisicing
+                                        elit. Fugit, magnam?</p>
+                                </div>
+                            </div>
+                            <div class="services__cart">
+                                <div class="services__cart--top top-icon top-icon--blue">
+                                    <span class="top-icon__back"></span>
+                                    <span class="top-icon__front">
+                                        <svg class="top-icon__icon" width="24px" height="24px" aria-hidden="true">
+                                            <use xlink:href="#more" />
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="services__cart--bottom">
+                                    <h4 class="services__cart--title">Дополнительно</h4>
+                                    <p class="services__cart--text">Lorem ipsum, dolor sit amet consectetur adipisicing
+                                        elit. Fugit, magnam?</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
         </main>
-
     </div>
     <script src="./js/script.js"></script>
 </body>
