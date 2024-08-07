@@ -1455,7 +1455,7 @@
         </div>
         <div class="modal" id="modal">
             <div class="modal__body">
-                <button class="btn modal__close" id="modalClose">
+                <button class="btn modal__close" data-modal="login">
                     <span class="modal__close--line"></span>
                     <span class="modal__close--line"></span>
                 </button>
@@ -1489,7 +1489,7 @@
                         </div>
                         <div class="card-back">
                             <div class="center-wrap">
-                                <form class="modal__form form hidden" action="POST">
+                                <form class="modal__form form" action="POST">
                                     <label class="form__label" for="email">
                                         Ваш логин (адрес электронной почты)
                                         <input class="form__input" type="email" name="email" id="newEmail" required

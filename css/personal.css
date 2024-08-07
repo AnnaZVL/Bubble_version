@@ -654,7 +654,6 @@
 .form__input:active {
     border: none;
     outline: none;
-    background-color: var(--color-bg);
     box-shadow: 0 4px 8px 0 rgba(21,21,21,.2);
 }
   
@@ -805,7 +804,7 @@
     z-index: 3;
     transform: translateY(-50%);
     pointer-events: none;
-    background-image: url(../images/icons/icon_calendar.svg);
+    background-image: url(../img/icons/icon_calendar.svg);;
     width: 20px;
     height: 20px;
 }

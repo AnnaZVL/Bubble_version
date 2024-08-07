@@ -106,25 +106,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Переключение форм входа
     // Смена кнопки
-    const $loginBtn = document.getElementById('loginBtn'),
-        $formAll = document.querySelector('.form'),
-        $registerBtn = document.getElementById('registerBtn'),
-        $checkbox = document.getElementById('reg-log');
+    const loginBtn = document.getElementById('loginBtn'),
+        formAll = document.querySelector('.form'),
+        registerBtn = document.getElementById('registerBtn'),
+        checkbox = document.getElementById('reg-log');
 
-    $formAll.addEventListener('submit', (event) => {
+    formAll.addEventListener('submit', (event) => {
         event.preventDefault()
     });
 
-    $loginBtn.addEventListener('click', function () {
-        $checkbox.checked = false;
-        $loginBtn.classList.add('active');
-        $registerBtn.classList.remove('active');
+    loginBtn.addEventListener('click', function () {
+        checkbox.checked = false;
+        loginBtn.classList.add('active');
+        registerBtn.classList.remove('active');
     });
 
-    $registerBtn.addEventListener('click', function () {
-        $checkbox.checked = true;
-        $registerBtn.classList.add('active');
-        $loginBtn.classList.remove('active');        
+    registerBtn.addEventListener('click', function () {
+        checkbox.checked = true;
+        registerBtn.classList.add('active');
+        loginBtn.classList.remove('active');        
     });
     
     // Слайдер секции топ исполнителей
