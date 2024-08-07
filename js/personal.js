@@ -61,7 +61,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // Открытие модального окна
     const $btnOpenModal = document.getElementById('sign'),
         $modal = document.getElementById('modal'),
-        $btnCloseModal = document.getElementById('modalClose');
+        $btnCloseModal = document.querySelectorAll('#modalClose'),
+        $btnAgreement = document.getElementById('agreement'),
+        $modalAgreement = document.getElementById('modalAgreement');
 
     $btnOpenModal.addEventListener('click', () => {
         $modal.classList.add('visible');
@@ -69,18 +71,38 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Закрытие модального окна по кнопке
-    $btnCloseModal.addEventListener('click', () => {        
-        $modal.classList.remove('visible');
-        document.body.classList.remove('scroll-stop');
+    $btnCloseModal.forEach(btn => {
+        btn.addEventListener('click', () => {  
+            
+            if ($modal) {
+                $modal.classList.remove('visible');
+            } 
+            if ($modalAgreement) {                
+                $modalAgreement.classList.remove('visible');
+            }
+            
+            document.body.classList.remove('scroll-stop');
+        });
     });
 
     // Закрытие модального окна по эскейп
     window.addEventListener('keydown', function (event) {
         if (event.key === 'Escape') {            
-            $modal.classList.remove('visible');
+            if ($modal) {
+                $modal.classList.remove('visible');
+            } 
+            if ($modalAgreement) {                
+                $modalAgreement.classList.remove('visible');
+            }
             document.body.classList.remove('scroll-stop');
         }
     });
+
+    // Открытие модалки с реквизитами договора
+    $btnAgreement.addEventListener('click', () => {
+        $modalAgreement.classList.add('visible');
+        document.body.classList.add('scroll-stop');
+    })
 
     // Переключение форм входа
     // Смена кнопки
@@ -192,6 +214,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 
                 if (item.dataset.step === currentStep) {
                     item.classList.remove('section-hidden');
+                    if ($steps[currentStep - 1])
                     $steps[currentStep - 1].classList.add('active')
                 } else {
                     item.classList.add('section-hidden');
@@ -228,4 +251,37 @@ document.addEventListener("DOMContentLoaded", () => {
         searchEnabled: false,
         allowHTML: true
     });
+    // Фарма реквизитов договора
+    const $formAgreement = document.querySelector('#formAgreement');
+
+    $formAgreement.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        const newRequisites = {
+            user: {
+                fio: document.querySelector('#fio').value,
+                date: document.querySelector('#date').value,
+                email: document.querySelector('#mail').value,
+                snils: document.querySelector('#snils').value,
+                inn: document.querySelector('#inn').value,
+                pasport: {
+                    number: document.querySelector('#number').value,
+                    series: document.querySelector('#series').value,
+                    department: document.querySelector('#departament').value,
+                    date: document.querySelector('#datePasport').value,
+                    cod: document.querySelector('#cod').value,
+                    address: document.querySelector('#address').value,                    
+                }
+            },
+            bank: {
+                fio: document.querySelector('#recipient').value,
+                name: document.querySelector('#nameBank').value,
+                checking: document.querySelector('#checking').value,
+                checkingCorr: document.querySelector('#checkingCorr').value,
+                bik: document.querySelector('#bik').value
+            }
+        }
+
+        console.log('object', newRequisites);
+    })
 })

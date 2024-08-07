@@ -654,6 +654,7 @@
 .form__input:active {
     border: none;
     outline: none;
+    background-color: var(--color-bg);
     box-shadow: 0 4px 8px 0 rgba(21,21,21,.2);
 }
   
@@ -752,6 +753,68 @@
     color: var(--color-second);
 }
 
+.form-agreement {
+    margin-bottom: 20px;
+    overflow-y: auto;
+    max-height: 600px;
+    height: 100%;
+}
+.modal__form--title {
+    font-size: 28px;
+}
+
+.modal__form--subtitle {
+    font-size: 18px;
+}
+
+.modal__form--box {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+    background-color: #2a2b38;   
+    border-radius: 6px;    
+}
+
+.modal__form--box input[type='date'] {
+    padding: 13px 20px;    
+    position: relative;
+    height: 48px;
+    width: 100%;
+    font-weight: 500;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0.5px;
+    outline: none;
+    color: var(--color-gray);
+    background-color: var(--color-bg);
+    border: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.modal__form--box input[type='date']::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    z-index: 3;
+    transform: translateY(-50%);
+    pointer-events: none;
+    background-image: url(../images/icons/icon_calendar.svg);
+    width: 20px;
+    height: 20px;
+}
+
+.modal__form--row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 /*Event*/
 .newEvent {
     display: flex;
@@ -1495,6 +1558,10 @@ input[type='date'] {
     -webkit-appearance: none;
     -moz-appearance: none;
     position: relative;    
+    color: var(--color-white);
+    outline: none;
+    width: 100%;
+    background-color: transparent;
 }
 
 input[type='date']::after {
@@ -1731,16 +1798,18 @@ input[type='date']::after {
     right: 10px;    
 }
 
-.payment__link {
+.payment__btn {
     padding: 10px 20px;
     border: 1px solid var(--color-blue);
     border-radius: 10px; 
+    color: var(--color-white);
     outline: none;
-    transition: color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out, border 0.3s ease-in-out;
 }
 
 .payment__link:hover {
     color: var(--color-second);
+    border-color: var(--color-second);
 }
 
 .additionally {
